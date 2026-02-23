@@ -28,7 +28,7 @@ html {
 }
 
 #main_first {
-  background-image: url("https://prs.ohousecdn.com/apne2/content/uploads/cards/snapshots/v1-444740061642880.webp");
+  background-image: url("https://image.ohousecdn.com/i/bucketplace-v2-development/uploads/cards/snapshots/1597103809_mGaeB.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -45,7 +45,7 @@ html {
 
 h1 {
   font-size: 3rem;
-  color: #7c4b0b;
+  color: #156306;
   margin-bottom: 20px;
   font-weight: 600;
 }
@@ -74,7 +74,7 @@ p {
 
 
 .text-box1 p {
-  color: #442905; 
+  color: #0d3d03; 
   font-size: 1.2rem;
   font-weight: 400;
   margin-bottom: 0 !important; 
