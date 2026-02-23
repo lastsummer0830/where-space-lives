@@ -8,6 +8,7 @@
       src="https://kit.fontawesome.com/4ec79785b5.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./js/search.js"></script>
     <link rel="stylesheet" href="./style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/left_screen.css" />
@@ -45,6 +46,48 @@
               ></path>
             </svg>
           </button>
+
+          <!-- Search Overlay -->
+          <div class="search_overlay" data-search-overlay aria-hidden="true">
+            <div
+              class="search_panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Search"
+            >
+              <!-- 검색바 -->
+              <div class="search_box">
+                <!-- 검색 영역 -->
+                <input class="search_input" type="text" placeholder="Search" />
+                <!-- 검색 버튼 -->
+                <button class="search_submit" type="button" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- 닫기 버튼 -->
+                <button
+                  class="search_close"
+                  type="button"
+                  data-close-search
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div class="search_keywords">
+                <h3>인기 검색어</h3>
+                <ul>
+                  <li><a href="#">item1</a></li>
+                  <li><a href="#">item2</a></li>
+                  <li><a href="#">item3</a></li>
+                  <li><a href="#">item4</a></li>
+                  <li><a href="#">item5</a></li>
+                  <li><a href="#">item6</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--  -->
         </div>
 
         <!-- 서브메뉴 -->
@@ -172,8 +215,6 @@
           </ul>
         </div>
       </nav>
-
-      
     </header>
 
     <!-- main -->
