@@ -7,7 +7,7 @@
 
     /* 바닥 뿌옇게 */
     background: linear-gradient(
-      to right,
+      to bottom,
       rgba(20, 20, 20, 0) 10%,
       rgba(20, 20, 20, 0) 25%,
       rgba(20, 20, 20, 0) 50%,
