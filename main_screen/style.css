@@ -1,27 +1,40 @@
 /* main */
-.container{
+#container{
     display: flex;
+    height: 1000px;
+    overflow: hidden;
+    z-index: 20;
+
+    /* 바닥 뿌옇게 */
+    background: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0) 10%,
+      rgba(20, 20, 20, 0) 25%,
+      rgba(20, 20, 20, 0) 50%,
+      rgba(20, 20, 20, 0.1) 75%,
+      rgba(20, 20, 20, 0.2) 100%
+    )
 }
 .empty{
     width: 40%;
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 .product{
     width: 60%;
-    border: 1px solid black;
     display: flex;
 }
 .product_left{
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 .product_right{
     width: 50%;
-    border: 1px solid black;
+    border: 1px solid gray;
 }
 /* content */
 .content{
     font-size: 0.7rem;
+    padding: 10px;
 }
 .product_picture img{
     width: 100%;
@@ -34,14 +47,14 @@
 }
 .product_list1{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     line-height: 3px;
 }
 .product_list2{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 70px;
     line-height: 3px;
@@ -54,14 +67,30 @@
 .product_list_explain{
     margin-left: 5px;
 }
+.product_list_explain .info_box{
+    background-color: whitesmoke;
+    color: gray;
+    line-height: 15px;
+    width: 90px;
+}
 .product_list_wrap img{
     margin: auto 0;
 }
 
 /* 더보기 button */
-.more{
+#more{
     display: block;
-    margin: 0 auto;
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+#more:hover{
+    cursor: pointer;
 }
 
 
