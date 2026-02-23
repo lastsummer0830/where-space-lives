@@ -15,3 +15,29 @@ const observer = new IntersectionObserver(
   { threshold: 0.25 }
 );
 targets.forEach((el) => observer.observe(el));
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+
+  function onScroll() {
+    // 1px만 내려가도 흰색 되게
+    header.classList.toggle("is-scrolled", window.scrollY > 0);
+  }
+
+  onScroll(); // 새로고침했을 때 위치 반영
+  window.addEventListener("scroll", onScroll, { passive: true });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".header");
+  const hero = document.querySelector(".hero");
+
+  const threshold = hero ? hero.offsetHeight * 0.25 : 0; // hero 25% 지나면
+  function onScroll() {
+    header.classList.toggle("is-scrolled", window.scrollY > threshold);
+  }
+
+  onScroll();
+  window.addEventListener("scroll", onScroll, { passive: true });
+});
