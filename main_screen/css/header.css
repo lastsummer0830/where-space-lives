@@ -305,3 +305,107 @@ body {
 .search_btn:hover svg {
   opacity: 0.6;
 }
+/* ================================== Search Overlay ================================== */
+.search_overlay {
+  position: fixed;
+  inset: 0;
+  /* header보다 높게 해서 덮기 */
+  z-index: 20000;
+  display: none;
+}
+
+/* 처음엔 안보이다 보이게 */
+.search_overlay.is_open {
+  display: block;
+}
+.search_overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* 패널 */
+.search_panel {
+  position: relative;
+  max-width: 640px;
+  margin: 70px auto 0;
+  padding: 18px 18px 22px;
+  background: transparent;
+}
+
+/* 닫기 버튼 */
+.search_close {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  font-size: 28px;
+  line-height: 44px;
+  cursor: pointer;
+}
+
+/* 검색 바 */
+.search_box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 2px solid #111;
+  padding: 8px 0;
+}
+
+.search_input {
+  flex: 1;
+  border: 0;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.search_submit {
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* 인기 키워드 */
+.search_keywords {
+  margin-top: 18px;
+}
+
+.search_keywords h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.search_keywords ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.search_keywords a {
+  color: #111;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.search_keywords a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/* 스크롤 잠금 */
+body.is_search_open {
+  overflow: hidden;
+}
