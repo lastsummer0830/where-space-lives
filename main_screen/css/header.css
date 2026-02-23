@@ -1,6 +1,16 @@
+body {
+  padding-top: 130px;
+}
 /* ================================== header ================================== */
 .header {
   margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid #cfcfcf;
+  z-index: 9999; /* 드롭다운보다 위에 오게 크게 */
 }
 /* ul 기본 padding/marker 제거(헤더 안에서만) */
 .header ul {
