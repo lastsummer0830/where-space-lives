@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductDetailedPage</title>
+    <link rel="stylesheet" href="../css/detailPage1.css" />
+  </head>
+  <body>
+    <main>
+      <section class="section1">
+        <!-- 텍스트 브랜드, 가격 타이틀, 기타등등 모임 -->
+        <p class="section1__link">
+          FJÄDERHARV 피에데르하르브 시리즈의 다른 제품들도 구경해보세요
+        </p>
+        <div class="section1__card">
+          <p class="section1__badge">IKEA Family 특별가</p>
+          <p class="section1__title">FJÄDERHARV 피에데르하르브</p>
+          <p class="section1__meta">
+            수납상자+뚜껑, 화이트,
+            <span class="section1__metaLink">32x35x31 cm</span>
+          </p>
+          <div class="section1__priceRow">
+            <h2 class="section1__price">₩8,000</h2>
+          </div>
+          <p class="section1__discount">10% 할인, ₩900 할인</p>
+          <p class="section1__sub">정가: ₩8,900</p>
+          <p class="section1__sub">2026.02.05 - 2026.03.03 재고 소진 시까지</p>
+        </div>
+        <br>
+        <!-- 색상선택 모임 modal 및 section2 -->
+        <section class="section2">
+        <!-- 색상 선택 row -->
+        <button class="optionRow" type="button" id="openColor">
+          <div class="optionRow__left">
+            <p class="optionRow__label">색상 선택</p>
+            <div class="optionRow__valueWrap">
+              <span class="swatch" id="colorSwatch" aria-hidden="true"></span>
+              <span class="optionRow__value" id="colorText">화이트</span>
+            </div>
+          </div>
+          <span class="optionRow__arrow">›</span>
+        </button>
+      </section>
+      <!-- ✅ 색상 선택 모달 -->
+      <div class="modal" id="colorModal" aria-hidden="true">
+        <div class="modal__overlay" id="closeColor"></div>
+
+        <div class="sheet" role="dialog" aria-modal="true" aria-label="색상 선택">
+          <div class="sheet__top">
+            <h2 class="sheet__title">색상 선택</h2>
+            <button class="sheet__close" type="button" id="xColor" aria-label="닫기"> ✕</button>
+          </div>
+          <div class="sheet__list" id="colorList"></div>
+        </div>
+      </div>
+
+      <!-- 수량 버튼 -->
+     <div class="btnMenu">
+        <div class="qty">
+            <button class="qty__btn" type="button" id="minus" aria-label="수량 감소">−</button>
+            <span class="qty__num" id="qtyNum">1</span>
+            <button class="qty__btn" type="button" id="plus" aria-label="수량 증가">+</button>
+        </div>
+        <button class="cartBtn" type="button">장바구니에 담기</button>
+    </div>
+      </section>
+    </main>
+    <script type="module" src="../js/detailPage1.js"></script>
+  </body>
+</html>
