@@ -10,11 +10,10 @@
     ></script>
     <script defer src="../js/header/search.js"></script>
     <script defer src="../js/header/header.js"></script>
-    <script defer src="../js/more_button.js"></script>
-    <script defer src="../js/login_popup.js"></script>
+    <script defer src="../js/login/login.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/header/header.css" />
-    <link rel="stylesheet" href="../css/main/left_screen.css" />
+    <link rel="stylesheet" href="../css/login/login.css" />
   </head>
 
   <body>
@@ -115,12 +114,16 @@
         <div class="nav_top">
           <ul class="menu_top">
             <li>
-              <a class="nav_link big" href="../../sub_screen/html/SubProject.html"
+              <a
+                class="nav_link big"
+                href="../../sub_screen/html/SubProject.html"
                 >WOOD</a
               >
             </li>
             <li>
-              <a class="nav_link big" href="../../sub_screen/html/SubProject2.html"
+              <a
+                class="nav_link big"
+                href="../../sub_screen/html/SubProject2.html"
                 >MORDERN</a
               >
             </li>
@@ -130,7 +133,9 @@
               >
             </li>
             <li>
-              <a class="nav_link big" href="../../sub_screen/sub_aj2/subaj2.html"
+              <a
+                class="nav_link big"
+                href="../../sub_screen/sub_aj2/subaj2.html"
                 >NATURE</a
               >
             </li>
@@ -147,27 +152,17 @@
 
           <!-- Search Overlay -->
           <div class="search_overlay" data-search-overlay aria-hidden="true">
-            <div
-              class="search_panel"
-              role="dialog"
-              aria-modal="true"
-              aria-label="Search"
-            >
+            <div class="search_panel" role="dialog" aria-modal="true">
               <!-- 검색바 -->
               <div class="search_box">
                 <!-- 검색 영역 -->
                 <input class="search_input" type="text" placeholder="Search" />
                 <!-- 검색 버튼 -->
-                <button class="search_submit" type="button" aria-label="Search">
+                <button class="search_submit" type="button">
                   <i class="fa-solid fa-magnifying-glass"></i>
                 </button>
                 <!-- 닫기 버튼 -->
-                <button
-                  class="search_close"
-                  type="button"
-                  data-close-search
-                  aria-label="Close"
-                >
+                <button class="search_close" type="button" data-close-search>
                   ✕
                 </button>
               </div>
@@ -304,8 +299,84 @@
     </header>
 
     <!-- main -->
-    <main>
-        
+    <main class="login_main">
+      <section class="login_wrap">
+        <h1 class="login_title">LOGIN</h1>
+        <p class="login_desc">아이디 / 비밀번호 / 이메일을 입력해 주세요.</p>
+
+        <!-- th: 메인 분류, td: 값, tr 분류+값 -->
+        <form id="loginForm" class="login_form" novalidate>
+          <table class="login_table">
+            <tbody>
+              <tr>
+                <th><label for="userId">ID</label></th>
+                <td>
+                  <input
+                    type="text"
+                    id="userId"
+                    name="userId"
+                    placeholder="아이디"
+                    autocomplete="username"
+                  />
+                </td>
+              </tr>
+
+              <tr>
+                <th><label for="userPw">PASSWORD</label></th>
+                <td>
+                  <div class="pw_field">
+                    <input
+                      type="password"
+                      id="userPw"
+                      name="userPw"
+                      placeholder="비밀번호"
+                      autocomplete="current-password"
+                    />
+                    <button
+                      type="button"
+                      class="pw_toggle"
+                      aria-pressed="false"
+                      data-toggle-password
+                    >
+                      <!-- eye -->
+                      <svg
+                        viewBox="0 0 24 24"
+                        width="22"
+                        height="22"
+                        aria-hidden="true"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M12 5c5.5 0 9.7 4.6 10.9 6.3.2.3.2.8 0 1.1C21.7 14.4 17.5 19 12 19S2.3 14.4 1.1 12.4a1 1 0 0 1 0-1.1C2.3 9.6 6.5 5 12 5zm0 2C8.2 7 4.8 10 3.3 12 4.8 14 8.2 17 12 17s7.2-3 8.7-5C19.2 10 15.8 7 12 7zm0 2.5A2.5 2.5 0 1 1 12 14a2.5 2.5 0 0 1 0-5z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+                </td>
+              </tr>
+
+              <tr>
+                <th><label for="userEmail">EMAIL</label></th>
+                <td>
+                  <input
+                    type="email"
+                    id="userEmail"
+                    name="userEmail"
+                    placeholder="email@example.com"
+                    autocomplete="email"
+                  />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="login_error" id="loginError" aria-live="polite"></p>
+
+          <div class="login_actions">
+            <button type="submit" class="login_btn">JOIN / LOGIN</button>
+          </div>
+        </form>
+      </section>
     </main>
 
     <!-- footer -->
