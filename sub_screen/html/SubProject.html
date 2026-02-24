@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SubProject</title>
+    <link rel="stylesheet" href="../css/SubProjectStyle.css" />
+    <script></script>
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="main_nav">
+        <!-- 로고, 작은 메뉴4개 -->
+        <div class="top_mini">
+          <a class="logo" href="index.html">LOGO</a>
+
+          <ul class="mini_menu">
+            <li><a href="#">M1</a></li>
+            <li><a href="#">M2</a></li>
+            <li><a href="#">M3</a></li>
+            <li><a href="#">M4</a></li>
+          </ul>
+        </div>
+
+        <!-- 메인메뉴 -->
+        <div class="nav_top">
+          <ul class="menu_top">
+            <li><a class="nav_link big" href="#">TOP1</a></li>
+            <li><a class="nav_link big" href="#">TOP2</a></li>
+            <li><a class="nav_link big" href="#">TOP3</a></li>
+            <li><a class="nav_link big" href="#">TOP4</a></li>
+          </ul>
+
+          <button class="search_btn" type="button" data-open-search>
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M15.611 10.056a5.556 5.556 0 1 0-11.112 0 5.556 5.556 0 0 0 11.112 0m2.5 0a8.02 8.02 0 0 1-1.51 4.693l5.04 5.124.085.096a1.251 1.251 0 0 1-1.773 1.744l-.095-.086-5.013-5.098a8.02 8.02 0 0 1-4.79 1.582 8.056 8.056 0 1 1 8.056-8.055"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Search Overlay -->
+          <div class="search_overlay" data-search-overlay aria-hidden="true">
+            <div
+              class="search_panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Search"
+            >
+              <!-- 검색바 -->
+              <div class="search_box">
+                <!-- 검색 영역 -->
+                <input class="search_input" type="text" placeholder="Search" />
+                <!-- 검색 버튼 -->
+                <button class="search_submit" type="button" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- 닫기 버튼 -->
+                <button
+                  class="search_close"
+                  type="button"
+                  data-close-search
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div class="search_keywords">
+                <h3>인기 검색어</h3>
+                <ul>
+                  <li><a href="#">item1</a></li>
+                  <li><a href="#">item2</a></li>
+                  <li><a href="#">item3</a></li>
+                  <li><a href="#">item4</a></li>
+                  <li><a href="#">item5</a></li>
+                  <li><a href="#">item6</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+
+        <!-- 서브메뉴 -->
+        <div class="nav_bottom">
+          <ul class="menu_bottom">
+            <li><a class="nav_link small" href="#">BOT1</a></li>
+
+            <!-- BOT2~6: hover mega dropdown -->
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT2</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA3</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA4</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA5</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT3</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA3</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT4</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT5</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT6</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <span class="divider"></span>
+
+          <ul class="extra_menu">
+            <li><a href="#">EX1</a></li>
+            <li><a href="#">EX2</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <!-- nav -->
+    <nav class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Containing the grain of wood</h1>
+        <p class="hero__desc">A furniture collection that makes your space warmer</p>
+      </div>
+    </nav>
+    <!-- main -->
+    <main>
+      <section class="section3">
+        <div class="section-3">
+          <div class="section3-stack reveal-img">
+            <div class="section3-img1"></div>
+            <div class="section3-img2"></div>
+          </div>
+          <div class="section3-text-wrap reveal-text">
+            <h2 class="section3-title">햇살이 머무는 우드 컬렉션</h2>
+            <p class="section3-text">
+              자연스러운 결, 부드러운 곡선. 공간에 편안한 온도를 더하는 가구를
+              소개합니다.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section4">
+        <div class="section-4">
+          <div class="section4-text-wrap reveal-left">
+            <h2 class="section4-title">미니멀 우드 베드사이드 테이블</h2>
+            <p class="section4-text">
+              상단 수납과 오픈 선반으로 작은 공간도 깔끔하게 정리됩니다.
+            </p>
+          </div>
+          <div class="section4-img reveal-right"></div>
+        </div>
+      </section>
+      <section class="section5">
+        <div class="section-5">
+          <div class="section5-top">
+            <div class="section5-img1"></div>
+            <div class="section5-text-wrap">
+              <h2 class="section5-title">햇살을 담은 우드 사이드보드</h2>
+              <p class="section5-text">
+                우드의 결을 살린 따뜻한 톤으로 공간을 차분하게 완성해줍니다.<br />
+                오래 두고 싶은 기본을 만나보세요.
+              </p>
+            </div>
+          </div>
+          <div class="section5-bottom">
+            <div class="section5-img2"></div>
+            <div class="section5-img3"></div>
+            <div class="section5-img4"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer>
+      <div class="call">
+        <div class="call_info">
+          <h4>고객센터 1660-2929</h4>
+          <p>운영시간: 평일 09:00 - 18:00 (점심시간 12:00 ~ 13:00)</p>
+          <div class="call_link">
+            <a href="#">
+              FAQ
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+            <a href="#">
+              1:1 문의
+              <i class="fa-solid fa-angle-right"></i>
+            </a>
+          </div>
+        </div>
+        <div class="call_icon">
+          <a href="#">
+            <i class="fa-brands fa-square-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-apple"></i>
+          </a>
+          <a href="#">
+            <i class="fa-brands fa-google-play"></i>
+          </a>
+        </div>
+      </div>
+      <hr />
+      <div class="notice">
+        <div class="notice_list">
+          <h4>NOTICE</h4>
+          <a href="#"
+            >[공지] 2026 설 연휴 고객센터 휴무 및 배송/반품 일정 안내</a
+          >
+          <a href="#"
+            >[공지] 개인정보처리방침 개정 내용 사전 안내 (시행일: 2026년 1월
+            27일)</a
+          >
+          <a href="#">[공지] 29CM 서비스 점검 안내</a>
+          <a href="#"
+            >[공지] 29CM 이용 약관 개정 안내 (시행일: 2026년 02월 23일)</a
+          >
+          <a href="#">[공지] 기상악화로 인한 배송 지연 양해 안내</a>
+        </div>
+        <div class="notice_menu">
+          <div class="about_us">
+            <h4>ABOUT US</h4>
+            <a href="#">인재채용</a>
+            <a href="#">상시할인혜택</a>
+          </div>
+          <div class="my_order">
+            <h4>MY ORDER</h4>
+            <a href="#">주문배송</a>
+            <a href="#">취소/교환/반품 내역</a>
+            <a href="#">상품리뷰 내역</a>
+            <a href="#">증빙서류발급</a>
+          </div>
+          <div class="my_account">
+            <h4>MY ACCOUNT</h4>
+            <a href="#">회원정보수정</a>
+            <a href="#">나의 멤버십 등급</a>
+            <a href="#">적립금 현황</a>
+            <a href="#">쿠폰</a>
+          </div>
+          <div class="help">
+            <h4>HELP</h4>
+            <a href="#">1:1 문의</a>
+            <a href="#">입점 및 제휴 문의</a>
+            <a href="#">상품 Q&A 내역</a>
+            <a href="#">공지사항</a>
+            <a href="#">FAQ</a>
+            <a href="#">고객의 소리</a>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="info">
+        <div class="info_link">
+          <a href="#">개인정보 처리방침</a>
+          <div>|</div>
+          <a href="#">이용약관</a>
+          <div>|</div>
+          <a href="#">분쟁해결기준</a>
+          <div>|</div>
+          <a href="#">안전거래센터</a>
+          <div>|</div>
+          <a href="#">결제대행위탁사</a>
+        </div>
+        <div class="info_list">
+          <div class="info_list1">
+            <p>상호면: (주)무신사</p>
+            <p>
+              사업장소재지: 서울특별시 성동구 아차산로 13길 11, 1층 (성수동2가,
+              무신사캠퍼스 N1)
+            </p>
+            <p>팩스: 070-8622-7737</p>
+            <p>사업자등록번호: 211-88-79575</p>
+            <p>통신판매업신고: 2022-서울성동-01952</p>
+            <p><a href="#">사업자정보확인</a></p>
+          </div>
+          <div class="info_list2">
+            <p>전화번호: 1660-2929</p>
+            <p>이메일: customer@29cm.co.kr</p>
+            <p>대표: 조만호, 박준모</p>
+            <p>호스팅서비스: (주)무신사</p>
+          </div>
+          <div class="info_list3">
+            <p>
+              일부 상품의 경우 29CM는 통신판매의 당사자가 아닌
+              통신판매중개자로서 상품, 상품정보, 거래에 대한 책임이 제한될 수
+              있으므로, 각 상품 페이지에서 구체적인 내용을 확인하시기 바랍니다.
+            </p>
+          </div>
+          <div class="info_list4">
+            <p>
+              당사는 고객님이 현금 결제한 금액에 대해 우리은행과 채무지급보증
+              계약을 체결하여 안전거래를 보장하고 있습니다
+            </p>
+            <p><a href="#">서비스 가입 사실 확인</a></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- SubProject js 코드 -->
+    <script src="../js/SubProject.js"></script>
+  </body>
+</html>
