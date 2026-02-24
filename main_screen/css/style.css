@@ -99,11 +99,10 @@
 }
 /* login popup */
 .wrap .fa-heart{
-    background-color: white;
+    background-color: transparent;
     color: black;
 }
 .btn_open{
-    font-weight:bold; 
     margin:5px; 
     padding:4px 6px; 
     background:#000; 
