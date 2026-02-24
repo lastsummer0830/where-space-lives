@@ -409,3 +409,77 @@ body {
 body.is_search_open {
   overflow: hidden;
 }
+
+/* ================================== header 스크롤 시 압축 ================================== */
+.header {
+  transition:
+    padding 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* 헤더 압축 */
+.header.is_compact .main_nav {
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto; /* logo | TOP | mini | search */
+  grid-template-rows: auto auto;
+  /* 영역 할당 */
+  grid-template-areas:
+    "logo menu mini search"
+    "logo bottom bottom bottom";
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 8px;
+}
+
+/* 기존 래퍼(div) grid에 직접 배치 */
+.header.is_compact .top_mini,
+.header.is_compact .nav_top {
+  display: contents;
+}
+
+/* grid 배치 */
+/* logo를 가장 왼쪽 배치 */
+.header.is_compact .logo {
+  grid-area: logo;
+}
+/* nav_top 왼쪽에 오게 */
+.header.is_compact .menu_top {
+  grid-area: menu;
+  margin: 0;
+}
+.header.is_compact .search_btn {
+  grid-area: search;
+  /* mini 오른쪽 */
+  justify-self: end;
+}
+/* nav_top 사이즈 조절 */
+.header.is_compact .nav_link.big {
+  font-size: 20px;
+  line-height: 1.1;
+}
+/* mini_menu 조정인데 했다가 애매해서 뺌 */
+/* .header.is_compact .mini_menu {
+  font-size: 10px;
+  gap: 10px;
+} */
+
+/* nav_bottom 간격 조정 */
+.header.is_compact .nav_bottom .menu_bottom {
+  gap: 12px;
+}
+
+/* 압축시 드롭다운의 기준이 nav_link로 그대로면 화면이 뚫리기 때문에 수정 */
+.header.is_compact .has_drop .drop {
+  /* 기준을 viewport로 */
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: auto;
+  top: calc(100% + 14px);
+}
+
+/* fixed로 바뀌면 top:100% 기준이 깨짐 따라서 헤더 아래로 정확히 내림 */
+.header.is_compact .has_drop .drop {
+  top: calc(var(--header-h, 70px) + 14px);
+}
