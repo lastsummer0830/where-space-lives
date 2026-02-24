@@ -1,8 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
+body { margin: 0; }
 
 body {
   padding-top: 0;
@@ -429,6 +426,98 @@ body.is_search_open {
   overflow: hidden;
 }
 
+/* ================================== header 스크롤 시 압축 ================================== */
+.header {
+  /* background: #fff; */
+  transition:
+    padding 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* 헤더 압축 */
+.header.is_compact .main_nav {
+  padding: 10px 16px;
+  display: grid;
+  grid-template-columns: auto 1fr auto auto; /* logo | TOP | mini | search */
+  grid-template-rows: auto auto;
+  /* 영역 할당 */
+  grid-template-areas:
+    "logo menu mini search"
+    "logo bottom bottom bottom";
+  align-items: center;
+  column-gap: 16px;
+  row-gap: 8px;
+}
+
+/* 기존 래퍼(div) grid에 직접 배치 */
+.header.is_compact .top_mini,
+.header.is_compact .nav_top {
+  display: contents;
+}
+
+/* grid 배치 */
+/* logo를 가장 왼쪽 배치 */
+.header.is_compact .logo {
+  grid-area: logo;
+}
+/* nav_top 왼쪽에 오게 */
+.header.is_compact .menu_top {
+  grid-area: menu;
+  margin: 0;
+}
+.header.is_compact .search_btn {
+  grid-area: search;
+  /* mini 오른쪽 */
+  justify-self: end;
+}
+/* nav_top 사이즈 조절 */
+.header.is_compact .nav_link.big {
+  font-size: 20px;
+  line-height: 1.1;
+}
+/* mini_menu 조정인데 했다가 애매해서 뺌 */
+/* .header.is_compact .mini_menu {
+  font-size: 10px;
+  gap: 10px;
+} */
+
+/* nav_bottom 간격 조정 */
+.header.is_compact .nav_bottom .menu_bottom {
+  gap: 12px;
+}
+
+/* 압축시 드롭다운의 기준이 nav_link로 그대로면 화면이 뚫리기 때문에 수정 */
+.header.is_compact .has_drop .drop {
+  /* 기준을 viewport로 */
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: auto;
+  top: calc(100% + 14px);
+}
+
+/* fixed로 바뀌면 top:100% 기준이 깨짐 따라서 헤더 아래로 정확히 내림 */
+.header.is_compact .has_drop .drop {
+  top: calc(var(--header-h, 70px) + 14px);
+}
+
+/* 압축 시 mini menu 아이콘만 보이게 */
+.header.is_compact .icon_text {
+  display: none;
+}
+
+/* 기본: 아이콘 + 텍스트 둘 다 보임 */
+.icon_text {
+  display: inline-flex;
+}
+
+/* 화면이 좁아지면 아이콘만 보이게 */
+@media (max-width: 1100px) {
+  .icon_text {
+    display: none;
+  }
+}
+
 /* nav */
 .hero {
   height: 100vh;
@@ -636,4 +725,136 @@ body.is_search_open {
   .s3-img{
     height: 320px;
   }
+}
+/* --------------- */
+
+/* footer */
+footer{
+    background-color: #ffffff;
+    font-size: 0.7rem;
+}
+/* footer call */
+.call{
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+.call_link{
+    margin-bottom: 10px;
+}
+.call_link a{
+    background-color: black;
+    color: white;
+    margin-right: 5px;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.call_icon a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+/* footer notice */
+.notice{
+    display: flex;
+    justify-content: space-between;
+}
+.notice_list{
+    display: flex;
+    flex-direction: column;
+}
+.notice_list a{
+    color: black;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+.notice_menu{
+    display: flex;
+}
+.about_us{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.about_us a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+.my_order{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.my_order a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+.my_account{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.my_account a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+.help{
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+}
+.help a{
+    text-decoration: none;
+    color: black;
+    margin-bottom: 5px;
+}
+
+/* footer info */
+.info_link{
+    display: flex;
+}
+.info_link a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.info_link div{
+    margin-right: 5px;
+    margin-left: 5px;
+    color: gray;
+}
+.info_list p{
+    margin-right: 10px;
+}
+.info_list1{
+    display: flex;
+    color: gray;
+}
+.info_list1 a{
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    height: 20px;
+    line-height: 20px;
+    padding: 3px;
+}
+.info_list2{
+    display: flex;
+    color: gray;
+}
+.info_list3{
+    display: flex;
+    color: gray;
+}
+.info_list4{
+    display: flex;
+    color: gray;
+}
+.info_list4 a{
+    color: gray;
+    font-weight: bold;
 }
