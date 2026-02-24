@@ -2,7 +2,7 @@
 var products = [
     { id : 0, price : 70000, title : '이케아 옷장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 1, price : 50000, title : '인테리어 원형 테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어소품', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 2, price : 60000, title : '에이스 침대', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 2, price : 60000, title : '에이스 침대', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 3, price : 60000, title : '다인용 소파', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'}
 ]
 
@@ -10,13 +10,13 @@ var products = [
 products.forEach(item => {
     let template = `
     <div class="card">
-        <a class="card_link">
+        <a class="card_link" href="#">
             <img src=${item.img}>
             <div class="card-body">
                 <h5 class="title">${item.title}</h5>
                 <p>${item.content}</p>
-                <b class="price">${item.price}</b>
-                <button class="btn btn-danger">주문하기</button>
+                <b class="price">${item.price}</b><br>
+                <div class="benefit">조건부 무료배송</div><div class="benefit">쿠폰</div>
             </div>
         </a>
     </div>
@@ -29,13 +29,13 @@ function layout(items){
     items.forEach(item => {
         let template = `
         <div class="card">
-            <a class="card_link">
-                <img src="https://via.placeholder.com/600">
+            <a class="card_link" href="#">
+                <img src=${item.img}>
                 <div class="card-body">
                     <h5 class="title">${item.title}</h5>
                     <p>${item.content}</p>
-                    <b class="price">${item.price}</b>
-                    <button class="btn btn-danger">주문하기</button>
+                    <b class="price">${item.price}</b><br>
+                    <div class="benefit">조건부 무료배송</div><div class="benefit">쿠폰</div>
                 </div>
             </a>
         </div>
