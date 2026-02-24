@@ -98,6 +98,46 @@
     cursor: pointer;
 }
 
+/* login popup */
+.btn_open{
+    font-weight:bold; 
+    margin:5px; 
+    padding:4px 6px; 
+    background:#000; 
+    color:#fff;
+}
+.pop_wrap{
+    
+    position:fixed; 
+    top:0; 
+    left:0; 
+    right:0; 
+    bottom:0;
+    background:rgba(0,0,0,0.5); 
+    font-size:0; 
+    /* text-align: block 요소 안에 있는 inline 요소(inline-block 포함)를 수평 정렬 */
+    text-align:center;/*pop_inner 수평 정렬*/
+    display: none;
+}
+/* pop_wrap의 오른쪽 모서리 중앙 부분(.pop_wrap:after)을 
+height 100%로 한 뒤 vertical-align으로
+수직 정렬해서 pop_wrap를 세로 중앙 정렬함 */
+.pop_wrap:after{
+    display:inline-block;/*text-align과 vertical-align 적용 가능한 형태*/
+    height:100%; 
+    /* vertical-align: block 요소 안에 있는 inline 요소(inline-block 포함)를 수직 정렬 */
+    vertical-align:middle;/*pop_inner 수직 정렬*/
+    content:'';
+}
+.pop_wrap .pop_inner{
+    display:inline-block;/*text-align과 vertical-align 적용 가능한 형태*/
+    padding:20px 30px; 
+    background:#fff; 
+    width:200px; 
+    vertical-align:middle;
+    font-size:15px;
+}
+
 
 
 
