@@ -1,20 +1,24 @@
 // 상품 데이터
 var products = [
-    { id : 0, price : 70000, title : 'Blossom Dress' },
-    { id : 1, price : 50000, title : 'Springfield Shirt' },
-    { id : 2, price : 60000, title : 'Black Monastery' }
+    { id : 0, price : 70000, title : '이케아 옷장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구'},
+    { id : 1, price : 50000, title : '인테리어 원형 테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어소품'},
+    { id : 2, price : 60000, title : '에이스 침대', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구'},
+    { id : 3, price : 60000, title : '다인용 소파', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구'}
 ]
 
 // 상품 생성
 products.forEach(item => {
     let template = `
     <div class="card">
-        <img src="https://via.placeholder.com/600">
-        <div class="card-body">
-            <h5 class="title">${item.title}</h5>
-            <p class="price">가격 : ${item.price}</p>
-            <button class="btn btn-danger">주문하기</button>
-        </div>
+        <a class="card_link">
+            <img src="https://via.placeholder.com/600">
+            <div class="card-body">
+                <h5 class="title">${item.title}</h5>
+                <p>${item.content}</p>
+                <b class="price">${item.price}</b>
+                <button class="btn btn-danger">주문하기</button>
+            </div>
+        </a>
     </div>
     `
     $('#items').append(template);
