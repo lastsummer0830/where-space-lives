@@ -15,9 +15,10 @@ body {
 
 /* =================================header================================ */
 
-/* body {
-  padding-top: 130px;
-} */
+ body {
+  padding: 0;
+  margin: 0;
+ }
 
 /* ================================== header ================================== */
 .header {
@@ -571,7 +572,7 @@ body.is_search_open {
 /* =================================header================================ */
 
 html {
-  scroll-snap-type: y mandatory;
+  scroll-snap-type: y proximity;
 }
 
 [class^="scroll-section"] {
@@ -1087,14 +1088,16 @@ footer {
 } */
 
 
+
 .header {
-  position: fixed; 
+  margin: 0;
+  position: fixed; /* 스크롤을 내려도 항상 맨 위에 고정 */
   top: 0;
   left: 0;
-  width: 100%; 
-  height: 130px; 
-  background-color: #ffffff; 
-  border-bottom: 1px solid #cfcfcf; 
+  width: 100%;
+  height: 130px;
+  background: #ffffff; 
+  border-bottom: 1px solid #cfcfcf;
   z-index: 9999; 
 }
 
@@ -1117,14 +1120,16 @@ footer {
 }
 
 
+
 [class^="scroll-section"] {
-  height: 100vh; 
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   scroll-snap-align: start; 
+ 
+  box-sizing: border-box; 
   
-
-  padding: 150px 20px 20px 20px; 
+  padding: 130px 20px 20px 20px; 
 }
