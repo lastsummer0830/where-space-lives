@@ -16,6 +16,9 @@ const productData = {
 };
 
 
+
+
+
 let currentIndex = 0;
 
 

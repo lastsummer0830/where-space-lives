@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function onScroll() {
     header.classList.toggle("is-scrolled", window.scrollY > thresholdBg);
-    header.classList.toggle("is-compact", window.scrollY > thresholdCompact);
+    header.classList.toggle("is_compact", window.scrollY > 80);
   }
 
   onScroll();
