@@ -8,7 +8,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background: #fff;
+  /* background: #fff; */
+  background: transparent;
   border: 1px solid #cfcfcf;
   z-index: 9999; /* 드롭다운보다 위에 오게 크게 */
 }
@@ -27,7 +28,7 @@ body {
 .header button {
   font: inherit;
   color: inherit;
-  background: transparent;
+  /* background: transparent; */
   border: 0;
   padding: 0;
 }
@@ -441,6 +442,7 @@ body.is_search_open {
 
 /* ================================== header 스크롤 시 압축 ================================== */
 .header {
+  background: #fff;
   transition:
     padding 180ms ease,
     box-shadow 180ms ease;
