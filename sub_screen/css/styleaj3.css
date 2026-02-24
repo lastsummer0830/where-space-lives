@@ -1,0 +1,386 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+
+.scroll-container {
+    height: calc(100vh - 80px);
+    scroll-snap-type: y proximity;
+    overflow-y: auto;
+}
+
+/* footer붙이고 스크롤 보이거나 위로 붙으면 이거 적용해보기 
+.scroll-container::-webkit-scrollbar {
+    display: none;
+} */
+
+.page-section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.half-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.left-color-bg {
+    width: 50%;
+    background-color: #5C6256;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 20px;
+}
+
+.right-image-bg {
+    width: 50%;
+    background-image: url(../images/nature1.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+/* 공통 컨텐츠 박스 */
+.content-box {
+    width: 100%;
+    max-width: 1200px;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/* ===================================2페이지=============================== */
+
+h2.fade-up{
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+p.fade-up{
+    font-size: 2rem;
+}
+/* --- 3페이지: 원형 레이아웃 중앙 정렬 수정 --- */
+.circle-group-container {
+    position: relative;
+    width: 650px;
+    /* 고정폭 대신 반응형 대응을 위해 설정 */
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-group {
+    position: relative;
+    width: 500px;
+    height: 500px;
+}
+
+.circle-item {
+    position: absolute;
+    border-radius: 50%;
+    overflow: hidden;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); */
+    transition: 0.3s;
+}
+
+.circle-text {
+    width: 250px;
+    height: 250px;
+    top: 0;
+    left: 0;
+    /* 그룹 내부에서 배치 */
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    z-index: 2;
+  
+}
+
+.circle-img {
+    width: 380px;
+    height: 380px;
+    bottom: 0;
+    right: 0;
+    /* 그룹 내부에서 배치 */
+    z-index: 1;
+}
+
+.circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.side-text {
+    position: absolute;
+    bottom: 0;
+    left: -50px;
+    /* 원형 그룹 왼쪽 하단에 걸치도록 배치 */
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* --- 4페이지: 대각선 그리드 수정 --- */
+
+
+.full-width {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+
+/* 포스트잇 공통 스타일 */
+.post-it-link {
+    display: block;
+    width: 400px;
+    padding: 20px;
+    background: #FFFDE7;
+    box-shadow: 5px 10px 20px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    position: relative;
+    transition: transform 0.4s ease; /* 애니메이션 속도 제어 */
+    z-index: 1;
+    /* transition: 0.4s; */
+}
+
+.p-blue {
+    background: #E3F2FD;
+    transform: rotate(2deg);
+}
+
+.p-pink {
+    background: #FCE4EC;
+    transform: rotate(-4deg);
+}
+
+.post-it-link:hover {
+    transform: scale(1.2) rotate(0deg) !important;
+    z-index: 10;
+}
+
+.post-it-img {
+    width: 100%;
+    /* height: 200px; */
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+/* --- 4페이지 전용: 꽉 찬 레이아웃 및 설명 박스 --- */
+.last-container {
+    max-width: 1400px !important;
+    /* 전체 창모드 시 좌우로 꽉 차게 확대 */
+    gap: 60px;
+}
+
+.product-pair {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+/* 포스트잇 크기 대폭 확대 (비어 보이지 않게) */
+.last-page .post-it-link {
+    width: 400px;
+    padding: 20px;
+}
+
+.last-page .post-it-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 0;
+    /* 내부 텍스트가 없으므로 마진 제거 */
+}
+
+/* 설명 칸 스타일 (h3, p) */
+.product-info {
+    width: 45%;
+}
+
+.product-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.product-info p {
+    font-size: 1.1rem;
+    color: #666;
+    line-height: 1.8;
+}
+
+/* --- 반응형 대응 (720px 및 모바일) --- */
+@media (max-width: 900px) {
+    .last-page .post-it-link {
+        width: 320px;
+    }
+
+    .product-info h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 720px) {
+
+    .product-pair,
+    .product-pair.reverse {
+        flex-direction: column !important;
+        /* 모바일에서 세로 정렬 */
+        text-align: center;
+    }
+
+    .product-info {
+        width: 100%;
+        order: 2;
+        /* 사진이 먼저 나오고 설명이 아래로 */
+    }
+
+    .last-page .post-it-link {
+        width: 90%;
+        order: 1;
+    }
+}
+
+.tape {
+    width: 80px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* --- 애니메이션 설정 --- */
+.animate-item {
+    opacity: 0;
+    transition: 1s ease;
+}
+
+.animate-item.show {
+    opacity: 1;
+    transform: none !important;
+}
+
+h1.slide-left {
+    margin-bottom: 30px;
+    transform: translateX(-100px);
+    font-size: 3rem;
+}
+
+p.slide-right {
+    transform: translateX(100px);
+    font-size: 2rem;
+}
+
+
+
+.fade-up {
+    transform: translateY(50px);
+}
+
+.zoom-in {
+    transform: scale(0.6);
+}
+
+.delay-1 {
+    transition-delay: 0.3s;
+}
+
+.delay-2 {
+    margin-top: 20px;
+    transition-delay: 0.6s;
+}
+
+/* 텍스트 회전 애니메이션 */
+.circle-text svg {
+    width: 100%;
+    height: 100%;
+    animation: rotateText 15s linear infinite;
+}
+
+@keyframes rotateText {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* --- 반응형 웹 (Responsive) --- */
+
+/* 1. 720px 모드 (태블릿) */
+@media (max-width: 900px) {
+    .circle-group-container {
+        transform: scale(0.8);
+        /* 전체적인 크기 축소로 비율 유지 */
+    }
+
+    .post-it-link {
+        width: 220px;
+    }
+
+    .diagonal-grid {
+        gap: 20px;
+    }
+}
+
+/* 2. 모바일 모드 */
+@media (max-width: 600px) {
+    .half-layout {
+        flex-direction: column;
+    }
+
+    .left-color-bg,
+    .right-image-bg {
+        width: 100%;
+        height: 50%;
+    }
+
+    .circle-group-container {
+        width: 100%;
+        height: auto;
+        transform: scale(0.6);
+    }
+
+    .side-text {
+        position: relative;
+        left: 0;
+        bottom: -20px;
+        text-align: center;
+    }
+
+    /* 모바일에서는 대각선보다 세로 배치가 보기 좋습니다 */
+    .diagonal-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .item-top-left,
+    .item-bottom-right {
+        justify-content: center;
+    }
+}
