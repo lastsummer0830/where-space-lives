@@ -1,17 +1,257 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <nav>
-        
+    <link rel="stylesheet" href="../css/SubProjectStyle2.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header class="header">
+      <nav class="main_nav">
+        <!-- 로고, 작은 메뉴4개 -->
+        <div class="top_mini">
+          <a class="logo" href="index.html">LOGO</a>
+
+          <ul class="mini_menu">
+            <li><a href="#">M1</a></li>
+            <li><a href="#">M2</a></li>
+            <li><a href="#">M3</a></li>
+            <li><a href="#">M4</a></li>
+          </ul>
+        </div>
+
+        <!-- 메인메뉴 -->
+        <div class="nav_top">
+          <ul class="menu_top">
+            <li><a class="nav_link big" href="#">TOP1</a></li>
+            <li><a class="nav_link big" href="#">TOP2</a></li>
+            <li><a class="nav_link big" href="#">TOP3</a></li>
+            <li><a class="nav_link big" href="#">TOP4</a></li>
+          </ul>
+
+          <button class="search_btn" type="button" data-open-search>
+            <svg viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M15.611 10.056a5.556 5.556 0 1 0-11.112 0 5.556 5.556 0 0 0 11.112 0m2.5 0a8.02 8.02 0 0 1-1.51 4.693l5.04 5.124.085.096a1.251 1.251 0 0 1-1.773 1.744l-.095-.086-5.013-5.098a8.02 8.02 0 0 1-4.79 1.582 8.056 8.056 0 1 1 8.056-8.055"
+              ></path>
+            </svg>
+          </button>
+
+          <!-- Search Overlay -->
+          <div class="search_overlay" data-search-overlay aria-hidden="true">
+            <div
+              class="search_panel"
+              role="dialog"
+              aria-modal="true"
+              aria-label="Search"
+            >
+              <!-- 검색바 -->
+              <div class="search_box">
+                <!-- 검색 영역 -->
+                <input class="search_input" type="text" placeholder="Search" />
+                <!-- 검색 버튼 -->
+                <button class="search_submit" type="button" aria-label="Search">
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <!-- 닫기 버튼 -->
+                <button
+                  class="search_close"
+                  type="button"
+                  data-close-search
+                  aria-label="Close"
+                >
+                  ✕
+                </button>
+              </div>
+
+              <div class="search_keywords">
+                <h3>인기 검색어</h3>
+                <ul>
+                  <li><a href="#">item1</a></li>
+                  <li><a href="#">item2</a></li>
+                  <li><a href="#">item3</a></li>
+                  <li><a href="#">item4</a></li>
+                  <li><a href="#">item5</a></li>
+                  <li><a href="#">item6</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!--  -->
+        </div>
+
+        <!-- 서브메뉴 -->
+        <div class="nav_bottom">
+          <ul class="menu_bottom">
+            <li><a class="nav_link small" href="#">BOT1</a></li>
+
+            <!-- BOT2~6: hover mega dropdown -->
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT2</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA3</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA4</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA5</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a> <a href="#">DROP_4</a
+                    ><a href="#">DROP_5</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT3</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA3</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT4</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT5</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                  <div class="drop_col">
+                    <p class="drop_title">CA2</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="has_drop">
+              <a class="nav_link small" href="#">BOT6</a>
+              <div class="drop">
+                <div class="drop_inner">
+                  <div class="drop_col">
+                    <p class="drop_title">CA1</p>
+                    <a href="#">DROP_1</a><a href="#">DROP_2</a
+                    ><a href="#">DROP_3</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <span class="divider"></span>
+
+          <ul class="extra_menu">
+            <li><a href="#">EX1</a></li>
+            <li><a href="#">EX2</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- nav -->
+    <nav class="hero">
+      <div class="hero__content">
+        <h1 class="hero__title">Dark comfort, clean design</h1>
+        <p class="hero__desc">A refined collection for modern spaces</p>
+      </div>
     </nav>
 
+    <!-- main -->
     <main>
+      <div class="section12">
+        <section class="section1">
+          <div class="split3">
+            <div class="panel p1"></div>
+            <div class="panel p2"></div>
+            <div class="panel p3"></div>
+          </div>
+        </section>
+        <section class="section2">
+          <div class="section-2">
+            <div class="section2-text-wrap reveal-left">
+              <h2 class="section2-title">작지만 실용적인 우드 테이블</h2>
+              <p class="section2-text">
+                수납과 정리를 한 번에, 매일 쓰기 좋은 디자인.
+              </p>
+            </div>
+            <div class="section2-img reveal-right"></div>
+          </div>
+        </section>
+      </div>
 
+      <section class="section3">
+        <div class="s3">
+          <div class="s3-img"></div>
+          <div class="s3-panel">
+            <h2 class="s3-title">밤을 닮은 작업 공간</h2>
+            <p class="s3-desc">차분한 조명 아래, 집중이 길어지는 디자인.</p>
+          </div>
+        </div>
+      </section>
     </main>
-</body>
+    <!-- SubProject js 코드 -->
+    <script src="../js/SubProject2.js"></script>
+  </body>
 </html>

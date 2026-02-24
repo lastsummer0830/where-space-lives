@@ -471,7 +471,7 @@ body.is_search_open {
   position: absolute;
   z-index: 1;
 }
-
+/* nav 트랜스폼 애니메이션 */
 @keyframes fadeUp {
   from {
     opacity: 0;
