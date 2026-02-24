@@ -1,0 +1,175 @@
+.product-gallery {
+  display: flex;
+  gap: 20px;
+  max-width: 800px;
+  height: 600px;
+}
+
+.galleryimg-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  padding-right: 5px;
+}
+
+.detailimg {
+  width: 60px;
+  height: 60px;
+  border: 1px solid #eee;
+  background: none;
+  cursor: pointer;
+  padding: 0;
+  transition: border 0.3s;
+}
+
+.detailimg.active {
+  border: 2px solid #000;
+}
+
+.detailimg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.main-display {
+  flex: 1;
+  position: relative;
+  background-color: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.main-display img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* 버튼 수직 중앙 정렬 */
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  opacity: 0; /* 평소에는 숨김 */
+  transition:
+    opacity 0.3s,
+    background-color 0.3s;
+}
+
+.main-display:hover .nav-btn {
+  opacity: 1;
+}
+
+.nav-btn:hover {
+  background-color: #fff;
+}
+
+.prev {
+  left: 20px;
+}
+.next {
+  right: 20px;
+}
+
+
+.slider-track {
+  display: flex; 
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out; 
+}
+
+
+.slider-track img {
+  min-width: 100%; 
+  height: 100%;
+  object-fit: contain; 
+}
+
+/* --- 좌우 반반(50:50) 레이아웃 나누기 --- */
+.split-layout {
+  display: flex; /* 왼쪽 영역과 오른쪽 영역을 가로로 배치합니다 */
+  gap: 50px; /* 왼쪽 영역과 오른쪽 영역 사이의 간격입니다 */
+  max-width: 1200px; /* 상세페이지 전체 넓이 */
+  margin: 0 auto; /* 화면 가운데 정렬 */
+}
+
+/* 내가 맡은 왼쪽 갤러리 섹션 */
+.product-gallery {
+  flex: 1; /* 가로 공간의 50%를 차지하게 합니다 */
+  display: flex;
+  flex-direction: column; /* 갤러리 바로 밑에 설명이 오도록 세로로 배치합니다 */
+}
+
+/* 팀원이 맡을 오른쪽 정보 섹션 */
+.product-info-right {
+  flex: 1; /* 가로 공간의 50%를 차지하게 합니다 */
+}
+
+/* --- 사진 갤러리 (썸네일 리스트 + 메인 이미지) 가로 배치 --- */
+.gallery-top {
+  display: flex;
+  gap: 20px;
+  height: 600px;
+}
+
+/* --- 메인 이미지 좌우 슬라이드 이동 효과 --- */
+.slider-track {
+  display: flex; /* 사진들을 가로로 한 줄로 이어 붙입니다 */
+  width: 100%;
+  height: 100%;
+  transition: transform 0.4s ease-in-out; /* 사진이 옆으로 0.4초 동안 부드럽게 밀리는 효과입니다 */
+}
+
+.slider-track img {
+  min-width: 100%; /* 각 사진이 메인 화면을 꽉 채우게 만듭니다 */
+  height: 100%;
+  object-fit: contain;
+}
+
+/* --- 사진 하단 제품 설명 및 제품 번호 스타일 --- */
+.product-description-box {
+  margin-top: 30px;
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5; /* 갤러리와 설명글 사이의 얇은 회색 선입니다 */
+}
+
+.product-description-box .content {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.product-info-id {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.product-info-id .id-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.product-info-id .id-number {
+  background-color: #000; /* 이케아 스타일의 검정색 박스 */
+  color: #fff; /* 흰색 글씨 */
+  padding: 4px 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
