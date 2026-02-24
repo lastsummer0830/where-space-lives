@@ -97,8 +97,11 @@
 #more:hover{
     cursor: pointer;
 }
-
 /* login popup */
+.wrap .fa-heart{
+    background-color: white;
+    color: black;
+}
 .btn_open{
     font-weight:bold; 
     margin:5px; 
@@ -107,7 +110,6 @@
     color:#fff;
 }
 .pop_wrap{
-    
     position:fixed; 
     top:0; 
     left:0; 
@@ -119,9 +121,6 @@
     text-align:center;/*pop_inner 수평 정렬*/
     display: none;
 }
-/* pop_wrap의 오른쪽 모서리 중앙 부분(.pop_wrap:after)을 
-height 100%로 한 뒤 vertical-align으로
-수직 정렬해서 pop_wrap를 세로 중앙 정렬함 */
 .pop_wrap:after{
     display:inline-block;/*text-align과 vertical-align 적용 가능한 형태*/
     height:100%; 
@@ -133,9 +132,25 @@ height 100%로 한 뒤 vertical-align으로
     display:inline-block;/*text-align과 vertical-align 적용 가능한 형태*/
     padding:20px 30px; 
     background:#fff; 
-    width:200px; 
+    width:200px;
     vertical-align:middle;
     font-size:15px;
+    border-radius: 5px;
+}
+.pop_wrap .pop_inner button{
+    background-color: white;
+    height: 30px;
+    border-radius: 5px;
+}
+.pop_wrap .pop_inner button:hover{
+    cursor: pointer;
+}
+.pop_wrap .pop_inner a{
+    text-decoration: none;
+    background-color: black;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 
