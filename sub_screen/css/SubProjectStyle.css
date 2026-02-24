@@ -12,13 +12,11 @@ body { padding-top: 0; }
   top: 0;
   left: 0;
   width: 100%;
-
   background: rgba(255,255,255,0.00);
   /* backdrop-filter: blur(0px); */
   -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(207,207,207,0.0);
   transition: background 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
-  
   z-index: 9999;
 }
 
@@ -436,8 +434,6 @@ body.is_search_open {
   
 }
 
-
-
 .hero__content{
   top: calc(50% + 65px);
 }
@@ -837,7 +833,6 @@ footer{
     color: gray;
     font-weight: bold;
 }
-
 /* 반응형 및 애니메이션 */
 @keyframes section3anminont {
   from {
