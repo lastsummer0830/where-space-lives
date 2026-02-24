@@ -11,7 +11,8 @@
     <script defer src="./js/search.js"></script>
     <script defer src="./js/header.js"></script>
     <script defer src="./js/more_button.js"></script>
-    <link rel="stylesheet" href="./style.css" />
+    <script defer src="./js/popup.js"></script>
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/left_screen.css" />
   </head>
@@ -330,9 +331,18 @@
                       <p class="info_box">조건부 무료배송</p>
                     </div>
                   </a>
-                  <a href="#">
-                    <i class="fa-regular fa-heart"></i>
-                  </a>
+                  <div class="wrap">
+                    <a href="#pop_info_1">
+                      <i class="btn_open fa-regular fa-heart"></i>
+                    </a>
+                    <!-- popup -->
+                    <div id="pop_info_1" class="pop_wrap">
+                      <div class="pop_inner">
+                        <p class="dsc">팝업 안내문구 입니다.</p>
+                        <button type="button" class="btn_close">닫기</button>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <hr />
                 <div class="product_list2">
@@ -365,10 +375,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>기다려온 입고 소식</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    새롭게 돌아온 리복의 클럽C 트리플 블랙을 단독으로 소개해요.
                   </p>
                 </a>
               </div>
@@ -422,10 +431,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>자유롭고 관능적인 태도</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    감각적인 협업으로 완성한 헤라×마크공 26SS 에디션은 오직 이곳에서만 만날 수 있어요.
                   </p>
                 </a>
               </div>
@@ -479,10 +487,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>모두가 기다려온</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    오늘 저녁 6시, 포에토의 새로운 시즌을 29 LIVE 단독 혜택으로 만나요.
                   </p>
                 </a>
               </div>
@@ -541,10 +548,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>희지가 추천하는 이유</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    인플루언서 희지가 추천하는 아워호프의 봄 신상. 오직 이곳에서만 만날 수 있어요.
                   </p>
                 </a>
               </div>
@@ -598,10 +604,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>다시 돌아온 기능성 협업</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    디스이즈네버댓과 고어텍스가 다시 만났어요. 일상과 필드를 넘나드는 스타일을 경험해 보세요.
                   </p>
                 </a>
               </div>
@@ -655,10 +660,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>봄을 닮은 컬러</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    한정 핑크로 새롭게 선보이는 정샘물 베스트 누더 쿠션과 함께 새로운 생기를 경험해 보세요.
                   </p>
                 </a>
               </div>
@@ -712,10 +716,9 @@
               </div>
               <div class="product_explain">
                 <a href="#">
-                  <h2>절제된 감각의 스니커즈</h2>
+                  <h2>오늘 저녁 8시</h2>
                   <p>
-                    쿠에른의 스타일로 재해석한 스니커즈를 ~5% 쿠폰 혜택으로
-                    만나보세요.
+                    변치 않는 위시 아이템, 스타우브를 29 LIVE 단독 혜택으로 만나요.
                   </p>
                 </a>
               </div>
@@ -895,16 +898,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      const moreBtn = document.getElementById("more");
-      const container = document.getElementById("container");
-      let cnt = 0;
-      let moreDisplay = ["2000px", "3000px", "4000px", "5000px"];
-
-      moreBtn.addEventListener("click", function () {
-        container.style.height = moreDisplay[cnt];
-        cnt++;
-      });
-    </script>
   </body>
 </html>
