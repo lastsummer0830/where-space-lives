@@ -51,8 +51,8 @@ console.log(products);
 products.forEach(item => {
     let template = `
     <div class="card">
-        <a class="card_link" href="#">
-            <img src=${item.img}>
+        <a class="card_link" href="../html/detailPage1.html?id=${item.id}">
+            <img src=${item.img[0]}>
             <div class="card-body">
                 <h5 class="title">${item.title}</h5>
                 <p>${item.content}</p>
@@ -71,8 +71,8 @@ function layout(items){
     items.forEach(item => {
         let template = `
         <div class="card">
-            <a class="card_link" href="#">
-                <img src=${item.img}>
+            <a class="card_link" href="../html/detailPage1.html?id=${item.id}">
+                <img src=${item.img[0]}>
                 <div class="card-body">
                     <h5 class="title">${item.title}</h5>
                     <p>${item.content}</p>

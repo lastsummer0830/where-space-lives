@@ -89,7 +89,7 @@ function layout(items){
         let template = `
         <div class="card">
             <a class="card_link" href="../html/detailPage1.html?id=${item.id}">
-                <img src=${item.img}>
+                <img src=${item.img[0]}>
                 <div class="card-body">
                     <h5 class="title">${item.title}</h5>
                     <p>${item.content}</p>
