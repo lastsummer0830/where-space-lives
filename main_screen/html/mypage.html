@@ -11,10 +11,10 @@
     <script defer src="../js/auth.js"></script>
     <script defer src="../js/header/search.js"></script>
     <script defer src="../js/header/header.js"></script>
-    <script defer src="../js/login/login.js"></script>
+    <script defer src="../js/mypage/mypage.js"></script>
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/header/header.css" />
-    <link rel="stylesheet" href="../css/login/login.css" />
+    <link rel="stylesheet" href="../css/mypage/maypage.css" />
   </head>
 
   <body>
@@ -300,83 +300,51 @@
     </header>
 
     <!-- main -->
-    <main class="login_main">
-      <section class="login_wrap">
-        <h1 class="login_title">LOGIN</h1>
-        <p class="login_desc">아이디 / 비밀번호 / 이메일을 입력해 주세요.</p>
+    <main class="mypage_main">
+      <section class="mypage_wrap">
+        <div class="mypage_head">
+          <h1 class="mypage_title">MY PAGE</h1>
+          <p class="mypage_desc">회원 정보와 나의 활동을 확인할 수 있어요.</p>
+        </div>
 
-        <!-- th: 메인 분류, td: 값, tr 분류+값 -->
-        <form id="loginForm" class="login_form" novalidate>
-          <table class="login_table">
-            <tbody>
-              <tr>
-                <th><label for="userId">ID</label></th>
-                <td>
-                  <input
-                    type="text"
-                    id="userId"
-                    name="userId"
-                    placeholder="아이디"
-                    autocomplete="username"
-                  />
-                </td>
-              </tr>
-
-              <tr>
-                <th><label for="userPw">PASSWORD</label></th>
-                <td>
-                  <div class="pw_field">
-                    <input
-                      type="password"
-                      id="userPw"
-                      name="userPw"
-                      placeholder="비밀번호"
-                      autocomplete="current-password"
-                    />
-                    <button
-                      type="button"
-                      class="pw_toggle"
-                      aria-pressed="false"
-                      data-toggle-password
-                    >
-                      <!-- eye -->
-                      <svg
-                        viewBox="0 0 24 24"
-                        width="22"
-                        height="22"
-                        aria-hidden="true"
-                      >
-                        <path
-                          fill="currentColor"
-                          d="M12 5c5.5 0 9.7 4.6 10.9 6.3.2.3.2.8 0 1.1C21.7 14.4 17.5 19 12 19S2.3 14.4 1.1 12.4a1 1 0 0 1 0-1.1C2.3 9.6 6.5 5 12 5zm0 2C8.2 7 4.8 10 3.3 12 4.8 14 8.2 17 12 17s7.2-3 8.7-5C19.2 10 15.8 7 12 7zm0 2.5A2.5 2.5 0 1 1 12 14a2.5 2.5 0 0 1 0-5z"
-                        />
-                      </svg>
-                    </button>
-                  </div>
-                </td>
-              </tr>
-
-              <tr>
-                <th><label for="userEmail">EMAIL</label></th>
-                <td>
-                  <input
-                    type="email"
-                    id="userEmail"
-                    name="userEmail"
-                    placeholder="email@example.com"
-                    autocomplete="email"
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-
-          <p class="login_error" id="loginError" aria-live="polite"></p>
-
-          <div class="login_actions">
-            <button type="submit" class="login_btn">JOIN / LOGIN</button>
+        <div class="mypage_card">
+          <div class="mypage_profile">
+            <div class="mypage_avatar" aria-hidden="true">👤</div>
+            <div class="mypage_user">
+              <p class="mypage_userid" id="mpUserId">-</p>
+              <p class="mypage_email" id="mpEmail">-</p>
+            </div>
           </div>
-        </form>
+
+          <div class="mypage_actions">
+            <!-- <a class="mypage_btn" href="#">내 정보 수정</a> -->
+            <button class="mypage_btn outline" type="button" id="logoutBtn">
+              로그아웃
+            </button>
+          </div>
+        </div>
+
+        <div class="mypage_grid">
+          <a class="mypage_box" href="#">
+            <h3>MY LIKE</h3>
+            <p>선호 상품 목록</p>
+          </a>
+
+          <a class="mypage_box" href="#">
+            <h3>SHOPPING BAG</h3>
+            <p>장바구니 목록</p>
+          </a>
+
+          <!-- <a class="mypage_box" href="#">
+            <h3>MY ORDER</h3>
+            <p>주문/배송 조회</p>
+          </a> -->
+
+          <!-- <a class="mypage_box" href="#">
+            <h3>HELP</h3>
+            <p>1:1 문의 / FAQ</p>
+          </a> -->
+        </div>
       </section>
     </main>
 
