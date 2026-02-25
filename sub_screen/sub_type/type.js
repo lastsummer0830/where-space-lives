@@ -18,6 +18,8 @@ var products = [
     { id : 15, price : 20000, title : '거실가구/테이블', content: '[29CM 단독] (uni)테이블2', type: '거실가구/테이블', img: 'https://m.dreamgagu.kr/web/product/big/202309/ce7291dfd8824d9249f7235bcc5191c6.jpg'}
 ]
 
+
+
 // url의 뒤에 붙어있는 쿼리스트링에서 category 가져오기
 const params = new URLSearchParams(window.location.search);
 const category = params.get("category");
@@ -86,7 +88,7 @@ function layout(items){
     items.forEach(item => {
         let template = `
         <div class="card">
-            <a class="card_link" href="#">
+            <a class="card_link" href="../html/detailPage1.html?id=${item.id}">
                 <img src=${item.img}>
                 <div class="card-body">
                     <h5 class="title">${item.title}</h5>
