@@ -69,6 +69,7 @@ import { products } from "../../../sub_screen/js/products.js";
       for (const it of colItems) {
         const link = document.createElement("a");
         link.href = "#"; // 임시 링크 (상세 페이지 연결 전)
+        link.dataset.id = it.id;
         link.textContent = it.title || it.content || `상품 ${it.id}`;
         col.appendChild(link);
       }
