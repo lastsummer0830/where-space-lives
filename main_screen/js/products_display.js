@@ -9,13 +9,21 @@ const productExplain = document.getElementsByClassName("product_explain");
 const productList1 = document.getElementsByClassName("product_list1");
 const productList2 = document.getElementsByClassName("product_list2");
 
+
+
+
 //  상품묶음(메인상품, 하위1 상품, 하위2 상품) 8개 생성
 for(let i=0; i<8; i++){
+
+    let [a, b, imgLink] = products[i].img[0].split("/");
+    console.log(imgLink);
+
+
     // 메인상품 이미지 출력
     productPicture[i].innerHTML = `
     <a href="../../sub_screen/html/detailPage1.html?id=${products[i].id}">
         <img
-        src="${products[i].img[0]}"
+        src="../../sub_screen/images/${imgLink}"
         alt=""
         />
     </a>
@@ -34,7 +42,7 @@ for(let i=0; i<8; i++){
     productList1[i].innerHTML = `
     <a href="../../sub_screen/html/detailPage1.html?id=${products[i].id}" class="product_list_wrap">
         <img
-            src="../../sub_screen/images/${products[i].img[0]}"
+            src="../../sub_screen/images/${imgLink}"
             alt=""
         />
         <div class="product_list_explain">
@@ -64,7 +72,7 @@ for(let i=0; i<8; i++){
     productList2[i].innerHTML = `
     <a href="../../sub_screen/html/detailPage1.html?id=${products[i].id}" class="product_list_wrap">
         <img
-            src="../../sub_screen/images/${products[i].img[0]}"
+            src="../../sub_screen/images/${imgLink}"
             alt=""
         />
         <div class="product_list_explain">
