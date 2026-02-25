@@ -49,7 +49,7 @@ console.log(products);
 products.forEach(item => {
     let template = `
     <div class="card">
-        <a class="card_link" href="#">
+        <a class="card_link" href="../html/detailPage1.html?id=${item.id}">
             <img src=${item.img}>
             <div class="card-body">
                 <h5 class="title">${item.title}</h5>
