@@ -13,7 +13,7 @@
     }
   };
   
-  const REPO = "acon_front_project"; // 네 레포명으로 변경
+  const REPO = "acon_front_project";
   const goLogin = () =>
     (location.href = `/${REPO}/main_screen/html/login.html`);
   const goMypage = () =>
