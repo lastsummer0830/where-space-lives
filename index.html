@@ -13,7 +13,10 @@
     <script defer src="./main_screen/js/header/search.js"></script>
     <script defer src="./main_screen/js/header/header.js"></script>
     <!-- 상품목록 생기면 주석처리 해제 -->
-    <!-- <script type="module" src="./main_screen/js/header/products_nav.js"></script> -->
+    <script
+      type="module"
+      src="./main_screen/js/header/products_nav.js"
+    ></script>
     <script defer src="./main_screen/js/more_button.js"></script>
     <link rel="stylesheet" href="./main_screen/css/style.css" />
     <link rel="stylesheet" href="./main_screen/css/header/header.css" />
@@ -118,24 +121,16 @@
         <div class="nav_top">
           <ul class="menu_top">
             <li>
-              <a class="nav_link big" href="./sub_screen/html/SubProject.html"
-                >WOOD</a
-              >
+              <a class="nav_link big" href="#">WOOD</a>
             </li>
             <li>
-              <a class="nav_link big" href="./sub_screen/html/SubProject2.html"
-                >MODERN</a
-              >
+              <a class="nav_link big" href="#">MODERN</a>
             </li>
             <li>
-              <a class="nav_link big" href="./sub_screen/html/subaj.html"
-                >UNIQUE</a
-              >
+              <a class="nav_link big" href="#">UNIQUE</a>
             </li>
             <li>
-              <a class="nav_link big" href="./sub_screen/html/subaj3.html"
-                >NATURE</a
-              >
+              <a class="nav_link big" href="#">NATURE</a>
             </li>
           </ul>
 
@@ -194,11 +189,11 @@
         <!-- 서브메뉴 -->
         <div class="nav_bottom">
           <ul class="menu_bottom">
-            <li><a class="nav_link small" href="./sub_screen/sub_best/best.html">BEST</a></li>
+            <li><a class="nav_link small" href="#">BEST</a></li>
 
             <!-- BOT2~6: hover mega dropdown -->
             <li class="has_drop">
-              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=거실가구">거실가구</a>
+              <a class="nav_link small" href="#">거실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -224,7 +219,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=침실가구">침실가구</a>
+              <a class="nav_link small" href="#">침실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -247,7 +242,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=수납가구">수납가구</a>
+              <a class="nav_link small" href="#">수납가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -265,7 +260,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=인테리어">인테리어</a>
+              <a class="nav_link small" href="#">인테리어</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -313,67 +308,34 @@
         <section class="left_screen">
           <ul class="left_list">
             <li>
-              <a class="left_card" href="#">
-                <div class="left_thumb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPkRBwF_9pdpWRY4dWLE4EHDJwvMJ1A77NQ&s"
-                    alt="left_1"
-                  />
-                </div>
-                <h2>ITEM1</h2>
+              <a class="left_card" href="#" data-left-go="WOOD">
+                <div class="left_thumb bg-wood"></div>
+                <h2>WOOD</h2>
                 <p>item1</p>
               </a>
             </li>
 
             <li>
-              <a class="left_card" href="#">
-                <div class="left_thumb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPkRBwF_9pdpWRY4dWLE4EHDJwvMJ1A77NQ&s"
-                    alt="left_2"
-                  />
-                </div>
-                <h2>ITEM2</h2>
+              <a class="left_card" href="#" data-left-go="MODERN">
+                <div class="left_thumb bg-modern"></div>
+                <h2>MODERN</h2>
                 <p>item2</p>
               </a>
             </li>
 
             <li>
-              <a class="left_card" href="#">
-                <div class="left_thumb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPkRBwF_9pdpWRY4dWLE4EHDJwvMJ1A77NQ&s"
-                    alt="left_3"
-                  />
-                </div>
-                <h2>ITEM3</h2>
+              <a class="left_card" href="#" data-left-go="NATURE">
+                <div class="left_thumb bg-nature"></div>
+                <h2>NATURE</h2>
                 <p>item3</p>
               </a>
             </li>
 
             <li>
-              <a class="left_card" href="#">
-                <div class="left_thumb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPkRBwF_9pdpWRY4dWLE4EHDJwvMJ1A77NQ&s"
-                    alt="left_4"
-                  />
-                </div>
-                <h2>ITEM4</h2>
+              <a class="left_card" href="#" data-left-go="UNIQUE">
+                <div class="left_thumb bg-unique"></div>
+                <h2>UNIQUE</h2>
                 <p>item4</p>
-              </a>
-            </li>
-
-            <li>
-              <a class="left_card" href="#">
-                <div class="left_thumb">
-                  <img
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPkRBwF_9pdpWRY4dWLE4EHDJwvMJ1A77NQ&s"
-                    alt="left_5"
-                  />
-                </div>
-                <h2>ITEM5</h2>
-                <p>item5</p>
               </a>
             </li>
           </ul>
