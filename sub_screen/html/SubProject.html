@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SubProject</title>
+    <script defer src="../../main_screen/js/auth_test.js"></script>
     <link rel="stylesheet" href="../css/SubProjectStyle.css" />
     <link rel="stylesheet" href="../../main_screen/css/header/header.css">
   </head>
@@ -13,7 +14,8 @@
       <nav class="main_nav">
         <!-- 로고, 작은 메뉴4개 -->
         <div class="top_mini">
-          <a class="logo" href="index.html">LOGO</a>
+          <a class="logo" href="#">LOGO</a>
+
           <!-- <ul class="mini_menu">
             <li><a href="#">M1</a></li>
             <li><a href="#">M2</a></li>
@@ -23,7 +25,7 @@
           <ul class="mini_menu icon_menu">
             <!-- MY PAGE -->
             <li>
-              <a class="icon_link" href="#">
+              <a class="icon_link" href="#" data-auth-mypage>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -83,7 +85,7 @@
 
             <!-- LOGIN -->
             <li>
-              <a class="icon_link" href="./main_screen/html/login.html">
+              <a class="icon_link" href="#" data-auth-login>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -105,18 +107,24 @@
         <div class="nav_top">
           <ul class="menu_top">
             <li>
-              <a class="nav_link big" href="../html/SubProject.html">WOOD</a>
-            </li>
-            <li>
-              <a class="nav_link big" href="../html/SubProject2.html"
-                >MORDERN</a
+              <a class="nav_link big" href="./sub_screen/html/SubProject.html"
+                >WOOD</a
               >
             </li>
             <li>
-              <a class="nav_link big" href="../sub_aj/subaj.html">UNIQUE</a>
+              <a class="nav_link big" href="./sub_screen/html/SubProject2.html"
+                >MODERN</a
+              >
             </li>
             <li>
-              <a class="nav_link big" href="../sub_aj2/subaj2.html">NATURE</a>
+              <a class="nav_link big" href="./sub_screen/html/subaj.html"
+                >UNIQUE</a
+              >
+            </li>
+            <li>
+              <a class="nav_link big" href="./sub_screen/html/subaj3.html"
+                >NATURE</a
+              >
             </li>
           </ul>
 
@@ -175,11 +183,11 @@
         <!-- 서브메뉴 -->
         <div class="nav_bottom">
           <ul class="menu_bottom">
-            <li><a class="nav_link small" href="#">BEST</a></li>
+            <li><a class="nav_link small" href="./sub_screen/sub_best/best.html">BEST</a></li>
 
             <!-- BOT2~6: hover mega dropdown -->
             <li class="has_drop">
-              <a class="nav_link small" href="#">거실가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=거실가구">거실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -205,7 +213,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">침실가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=침실가구">침실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -228,7 +236,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">수납가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=수납가구">수납가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -246,7 +254,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">인테리어</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=인테리어">인테리어</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
