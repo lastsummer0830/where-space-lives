@@ -8,15 +8,20 @@
       src="https://kit.fontawesome.com/4ec79785b5.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="./main_screen/js/auth.js"></script>
     <script defer src="./main_screen/js/header/search.js"></script>
     <script defer src="./main_screen/js/header/header.js"></script>
+    <!-- 상품목록 생기면 주석처리 해제 -->
+    <!-- <script type="module" src="./main_screen/js/header/products_nav.js"></script> -->
     <script defer src="./main_screen/js/more_button.js"></script>
-    <script defer src="./main_screen/js/login_popup.js"></script>
     <link rel="stylesheet" href="./main_screen/css/style.css" />
     <link rel="stylesheet" href="./main_screen/css/header/header.css" />
     <link rel="stylesheet" href="./main_screen/css/main/left_screen.css" />
+<<<<<<< HEAD
 
     
+=======
+>>>>>>> 0f3e3d94a967bf91251c5e0e8bb84b9252605dfa
   </head>
 
   <body>
@@ -35,7 +40,7 @@
           <ul class="mini_menu icon_menu">
             <!-- MY PAGE -->
             <li>
-              <a class="icon_link" href="#">
+              <a class="icon_link" href="#" data-auth-mypage>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -95,7 +100,7 @@
 
             <!-- LOGIN -->
             <li>
-              <a class="icon_link" href="./main_screen/html/login.html">
+              <a class="icon_link" href="#" data-auth-login>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -193,11 +198,11 @@
         <!-- 서브메뉴 -->
         <div class="nav_bottom">
           <ul class="menu_bottom">
-            <li><a class="nav_link small" href="#">BEST</a></li>
+            <li><a class="nav_link small" href="./sub_screen/sub_best/best.html">BEST</a></li>
 
             <!-- BOT2~6: hover mega dropdown -->
             <li class="has_drop">
-              <a class="nav_link small" href="#">거실가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=거실가구">거실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -223,7 +228,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">침실가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=침실가구">침실가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -246,7 +251,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">수납가구</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=수납가구">수납가구</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -264,7 +269,7 @@
             </li>
 
             <li class="has_drop">
-              <a class="nav_link small" href="#">인테리어</a>
+              <a class="nav_link small" href="./sub_screen/sub_type/type.html?category=인테리어">인테리어</a>
               <div class="drop">
                 <div class="drop_inner">
                   <div class="drop_col">
@@ -1084,7 +1089,6 @@
             <a href="#">고객의 소리</a>
           </div>
         </div>
-
       </div>
       <hr />
       <div class="info">
@@ -1134,6 +1138,5 @@
         </div>
       </div>
     </footer>
-  
   </body>
 </html>
