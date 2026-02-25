@@ -8,6 +8,11 @@
       src="https://kit.fontawesome.com/4ec79785b5.js"
       crossorigin="anonymous"
     ></script>
+    <script defer src="../../main_screen/js/auth_test.js"></script>
+    <script
+      type="module"
+      src="../../main_screen/js/header/products_nav.js"
+    ></script>
     <script defer src="../../main_screen/js/header/search.js"></script>
     <script defer src="../../main_screen/js/header/header.js"></script>
     <script defer src="./best.js" type="module"></script>
@@ -114,24 +119,16 @@
         <div class="nav_top">
           <ul class="menu_top">
             <li>
-              <a class="nav_link big" href="#"
-                >WOOD</a
-              >
+              <a class="nav_link big" href="#">WOOD</a>
             </li>
             <li>
-              <a class="nav_link big" href="#"
-                >MODERN</a
-              >
+              <a class="nav_link big" href="#">MODERN</a>
             </li>
             <li>
-              <a class="nav_link big" href="#"
-                >UNIQUE</a
-              >
+              <a class="nav_link big" href="#">UNIQUE</a>
             </li>
             <li>
-              <a class="nav_link big" href="#"
-                >NATURE</a
-              >
+              <a class="nav_link big" href="#">NATURE</a>
             </li>
           </ul>
 
@@ -305,27 +302,35 @@
     <!-- main -->
     <main>
       <section class="best_wrap">
-        <h2>BEST</h2><hr>
+        <h2>BEST</h2>
+        <hr />
         <div class="container">
-            <!-- 상품 컨테이너 -->
-            <div class="type_container">
-                <button class="btn btn-danger mt-3" id="revert">전체</button>
-                <div class="divide">|</div>
-                <button id="수납가구" type="button">수납 가구</button>
-                <div class="divide">|</div>
-                <button id="인테리어" type="button">인테리어</button>
-                <div class="divide">|</div>
-                <button id="침실가구" type="button">침실 가구</button>
-                <div class="divide">|</div>
-                <button id="거실가구" type="button">거실 가구</button>
-            </div><hr>
-            <div class="sort_container">
-                <!-- 상품 정렬 버튼 -->
-                <button class="btn btn-danger mt-3" id="sortAbc">가나다순 정렬</button>
-                <button class="btn btn-danger mt-3" id="sortPrice">가격순 정렬</button>
-                <button class="btn btn-danger mt-3" id="filterPrice">6만원 이하 보기</button>
-            </div>
-            <div class="card-group container" id="items"></div>
+          <!-- 상품 컨테이너 -->
+          <div class="type_container">
+            <button class="btn btn-danger mt-3" id="revert">전체</button>
+            <div class="divide">|</div>
+            <button id="수납가구" type="button">수납 가구</button>
+            <div class="divide">|</div>
+            <button id="인테리어" type="button">인테리어</button>
+            <div class="divide">|</div>
+            <button id="침실가구" type="button">침실 가구</button>
+            <div class="divide">|</div>
+            <button id="거실가구" type="button">거실 가구</button>
+          </div>
+          <hr />
+          <div class="sort_container">
+            <!-- 상품 정렬 버튼 -->
+            <button class="btn btn-danger mt-3" id="sortAbc">
+              가나다순 정렬
+            </button>
+            <button class="btn btn-danger mt-3" id="sortPrice">
+              가격순 정렬
+            </button>
+            <button class="btn btn-danger mt-3" id="filterPrice">
+              6만원 이하 보기
+            </button>
+          </div>
+          <div class="card-group container" id="items"></div>
         </div>
       </section>
     </main>
