@@ -7,7 +7,7 @@ export const products = [
     type: "수납가구",
     content: "수납상자+뚜껑, 화이트, 32x35x31 cm",
     img: [
-    "../images/의자이미지img1.jpg",
+    "",
     "",
     "",
     "",
