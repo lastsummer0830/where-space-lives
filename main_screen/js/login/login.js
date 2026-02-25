@@ -7,7 +7,7 @@
     if (history.length > 1) {
       history.back(); // 이전 화면으로
     } else {
-      location.href = "../../index.html"; // 이전페이지 없으면 메인
+      location.href = "../index.html";
     }
     return; // 아래 코드 실행 막기
   }
@@ -76,10 +76,13 @@
       email: emailVal,
       loginAt: Date.now(),
     };
-    sessionStorage.setItem("loginUser", JSON.stringify(loginUser));
+
+    // 로그인 정보 저장(비번 저장 X)
+    const payload = { id: idVal, email: emailVal };
+    sessionStorage.setItem("loginUser", JSON.stringify(payload));
 
     // 이전 화면으로(없으면 메인)
     if (history.length > 1) history.back();
-    else location.href = "../../index.html";
+    else location.href = "../index.html";
   });
 })();
