@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }, {
        
-        threshold: 0.15 
+        threshold: 0.25 
     });
 
  
@@ -31,3 +31,5 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+
+
