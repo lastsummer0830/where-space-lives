@@ -34,6 +34,67 @@ if (!product) {
 
   thumbImgs.forEach((img, i) => (img.alt = `${product.title} 썸네일 ${i + 1}`));
   mainImgs.forEach((img, i) => (img.alt = `${product.title} 메인 ${i + 1}`));
+
+  // ----------------------------------------------------------------------
+  // 💡 사진 안 넘어가서 추가로 수정함
+  // ----------------------------------------------------------------------
+  const prevBtn = document.querySelector(".prev"); // '<' 왼쪽 화살표 버튼
+  const nextBtn = document.querySelector(".next"); // '>' 오른쪽 화살표 버튼
+  const sliderTrack = document.getElementById("sliderTrack"); // 메인 사진 트랙
+  const detailBtns = document.querySelectorAll(".detailimg"); // 왼쪽 썸네일 버튼들
+
+  let currentIndex = 0; // 현재 보고 있는 사진의 순서 (0부터 시작)
+
+  // 사진을 좌우로 스무스하게 넘겨주는 작동 함수
+  function moveSlide(index) {
+    // 사진이 끝을 넘어가면 다시 처음으로, 처음에서 이전으로 가면 마지막으로 순환
+    if (index >= detailBtns.length) {
+      currentIndex = 0;
+    } else if (index < 0) {
+      currentIndex = detailBtns.length - 1;
+    } else {
+      currentIndex = index;
+    }
+
+    
+    if (sliderTrack) {
+      sliderTrack.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+
+    // 현재 보고 있는 사진 썸네일에 검은 테두리(active) 켜고 끄기
+    detailBtns.forEach((btn, i) => {
+      if (i === currentIndex) {
+        btn.classList.add("active");
+      } else {
+        btn.classList.remove("active");
+      }
+    });
+  }
+
+  // 오른쪽 화살표 버튼(next) 클릭 이벤트
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      moveSlide(currentIndex + 1);
+    });
+  }
+
+  // 왼쪽 화살표 버튼(prev) 클릭 이벤트
+  if (prevBtn) {
+    prevBtn.addEventListener("click", () => {
+      moveSlide(currentIndex - 1);
+    });
+  }
+
+  // 왼쪽 썸네일 사진 직접 클릭 이벤트
+  detailBtns.forEach((btn, index) => {
+    btn.addEventListener("click", () => {
+      moveSlide(index);
+    });
+  });
+// ----------------------------------------------------------------------
+  // 💡 사진 안 넘어가서 추가로 수정함 끝
+  // ----------------------------------------------------------------------
+
 }
 
 /* ===================== 아래는 그대로 (색상/수량) ===================== */

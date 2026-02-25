@@ -548,8 +548,40 @@ footer{
   align-items: center;
   overflow: hidden;
   scroll-snap-align: start; 
- 
   box-sizing: border-box; 
-  
   padding: 130px 20px 20px 20px; 
 }
+
+/* ===================header 여백 남는 부분 수정(강제함)===============================  */
+.header.is_compact {
+    height: auto !important;      
+    min-height: 0 !important;     
+    padding-bottom: 0 !important; 
+}
+
+
+.header.is_compact .main_nav {
+    height: auto !important;     
+    min-height: 0 !important;     
+    padding-top: 15px !important;    
+    padding-bottom: 15px !important;
+    margin-bottom: 0 !important;  
+}
+
+
+.header.is_compact .main_menu {
+    display: none !important;    
+    height: 0 !important;        
+    margin: 0 !important;        
+    padding: 0 !important;        
+    overflow: hidden !important;  
+}
+
+
+.header.is_compact .top_mini,
+.header.is_compact .mini_menu {
+    margin-bottom: 0 !important;  
+    padding-bottom: 0 !important; 
+}
+
+/* ===================header 여백 남는 부분 수정(강제함)===============================  */
