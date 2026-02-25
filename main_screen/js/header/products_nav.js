@@ -1,4 +1,4 @@
-// 물품목록 가져오기
+// sub_screen/js/products.js에서 상품목록 가져오기
 import { products } from "../../../sub_screen/js/products.js";
 
 (() => {
@@ -6,80 +6,96 @@ import { products } from "../../../sub_screen/js/products.js";
   const menuBottom = document.querySelector(".nav_bottom .menu_bottom");
   if (!menuBottom) return;
 
-  // content에서 + 기준 빼내오기
-  const pickTitle = (content = "") => content.split("+")[0].trim();
+  // type을 "대분류/소분류"로 분리
+  // 예) "수납가구/수납장" -> { main: "수납가구", sub: "수납장" }
+  const splitType = (type = "") => {
+    const [main, sub] = String(type)
+      .split("/")
+      .map((v) => v?.trim());
+    return {
+      main: main || "기타",
+      sub: sub || "기타",
+    };
+  };
 
-  // type 기준으로 products를 그룹핑 >> Map 저장
-  // Map: { "수납가구" -> [상품들], "거실가구" -> [상품들], ... }
-  const map = new Map();
+  // 드롭다운에서 보여줄 상품 텍스트(우선순위: title -> content -> 상품id)
+  const pickItemText = (p) => p.title || p.content || `상품 ${p.id}`;
+
+  // products를 "대분류 -> 소분류 -> 상품들" 구조로 그룹핑
+  // 구조 예시:
+  // {
+  //   "수납가구": Map( "수납장" -> [..], "서랍장" -> [..] ),
+  //   "거실가구": Map( "소파" -> [..], "테이블" -> [..] )
+  // }
+  const mainMap = new Map();
+
   for (const p of products) {
-    const type = (p.type || "기타").trim();
-    if (!map.has(type)) map.set(type, []);
-    map.get(type).push(p);
+    const { main, sub } = splitType(p.type);
+
+    if (!mainMap.has(main)) mainMap.set(main, new Map());
+    const subMap = mainMap.get(main);
+
+    if (!subMap.has(sub)) subMap.set(sub, []);
+    subMap.get(sub).push(p);
   }
 
-  // Best빼고 다 삭제
+  // BEST li만 남기고 나머지 카테고리 메뉴는 전부 재생성
   const bestLi = menuBottom.querySelector("li:first-child");
   menuBottom.innerHTML = "";
   if (bestLi) menuBottom.appendChild(bestLi);
 
-  // type별로 li.has_drop + dropdown(.drop) 구조를 동적으로 생성
-  for (const [type, items] of map.entries()) {
+  // 대분류별로 li.has_drop + dropdown(.drop) 구조를 동적으로 생성
+  for (const [main, subMap] of mainMap.entries()) {
     const li = document.createElement("li");
     li.className = "has_drop";
 
-    // 상단 메뉴명: type
+    // 상단 메뉴명: 대분류(main)
     const a = document.createElement("a");
     a.className = "nav_link small";
-    a.href = "#"; // 이 후 카테고리 페이지 링크
-    a.textContent = type;
+    a.href = "#"; // 나중에 type.html 연결할 때 JS로 이동 처리
+    a.textContent = main;
+    a.dataset.category = main; // type.html?category=... 만들 때 쓸 값
 
     // hover 시 나오는 드롭다운 패널(.drop)
     const drop = document.createElement("div");
     drop.className = "drop";
 
-    // 드롭다운 내부 컨테이너 (.drop_inner)
+    //  드롭다운 내부 컨테이너 (.drop_inner)
     const inner = document.createElement("div");
     inner.className = "drop_inner";
 
-    // 같은 type에서 content앞 내용 구분
-    // colMap: { "수납상자" -> [상품들], "서랍장" -> [상품들], ... }
-    const colMap = new Map();
-    for (const it of items) {
-      const title = pickTitle(it.content);
-      if (!colMap.has(title)) colMap.set(title, []);
-      colMap.get(title).push(it);
-    }
-
-    // 최종 이어붙이기
-    for (const [title, colItems] of colMap.entries()) {
-      // 하나의 컬럼(예: "소파" 컬럼 / "테이블" 컬럼)
+    //  소분류별 컬럼 생성
+    for (const [sub, items] of subMap.entries()) {
+      //  하나의 컬럼(예: "수납장" 컬럼 / "서랍장" 컬럼)
       const col = document.createElement("div");
       col.className = "drop_col";
 
-      // contetn + 앞부분
-      // 없으면 fallback으로 type을 사용
+      //  컬럼 제목: 소분류(sub)
       const pTitle = document.createElement("p");
       pTitle.className = "drop_title";
-      pTitle.textContent = title || type;
+      pTitle.textContent = sub;
+      pTitle.dataset.category = main; //  나중에 type.html 이동용
+      pTitle.dataset.sub = sub; //  소분류 필터링용
 
       col.appendChild(pTitle);
 
-      // 이 후 상세페이지 연결
-      for (const it of colItems) {
+      //  소분류 안의 상품 링크들(추후 상세페이지 연결)
+      for (const it of items) {
         const link = document.createElement("a");
-        link.href = "#"; // 임시 링크 (상세 페이지 연결 전)
-        link.dataset.id = it.id;
-        link.textContent = it.title || it.content || `상품 ${it.id}`;
+        link.href = "#"; //  나중에 detailPage1.html 연결할 때 JS로 이동 처리
+        link.dataset.id = it.id; //  detailPage1.html?id=...
+        link.dataset.category = main; //  필요하면 같이 넘길 수 있음
+        link.dataset.sub = sub;
+        link.textContent = pickItemText(it);
+
         col.appendChild(link);
       }
 
-      // 만들어진 컬럼을 inner에 추가
+      //  만들어진 컬럼을 inner에 추가
       inner.appendChild(col);
     }
 
-    // 최종 삽입
-    // drop에 inner 붙이고, li에 a/drop 붙여서 menu_bottom에 삽입
+    //  최종 삽입
     drop.appendChild(inner);
     li.appendChild(a);
     li.appendChild(drop);
