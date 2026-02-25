@@ -15,7 +15,7 @@ for(let i=0; i<8; i++){
     productPicture[i].innerHTML = `
     <a href="../../sub_screen/html/detailPage1.html?id=${products[i].id}">
         <img
-        src="../../sub_screen/images/${products[i].img[0]}"
+        src="${products[i].img[0]}"
         alt=""
         />
     </a>
