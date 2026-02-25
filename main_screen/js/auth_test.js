@@ -66,10 +66,30 @@
     goHome();
   });
 
+  // 헤더 이동(상단/하단/드롭다운) 전부 "루트 기준"으로 처리
   document.addEventListener("click", (e) => {
     const target = e.target;
 
-    // 3-1) nav_link small (카테고리)
+    // 2) menu_top (WOOD~NATURE)
+    const topLink = target.closest(".nav_top a.nav_link.big");
+    if (topLink) {
+      e.preventDefault();
+      const label = topLink.textContent.trim().toUpperCase();
+
+      const routes = {
+        WOOD: `${BASE}/sub_screen/html/SubProject.html`,
+        MODERN: `${BASE}/sub_screen/html/SubProject2.html`,
+        UNIQUE: `${BASE}/sub_screen/html/subaj3.html`,
+        NATURE: `${BASE}/sub_screen/html/subaj.html`,
+      };
+
+      const to = routes[label];
+      if (to) location.href = to;
+      else console.warn("[auth.js] menu_top 라벨 매핑 없음:", label);
+      return;
+    }
+
+    // 3-1) nav_link small (카테고리: 대분류)
     const categoryLink = target.closest(".has_drop > a.nav_link.small");
     if (categoryLink) {
       e.preventDefault();
@@ -100,9 +120,6 @@
     // 3-3) drop 안 상품 링크 (detailPage1)
     const productLink = target.closest(".drop_col a");
     if (productLink) {
-      // drop_title 밑의 링크만 타게 하고 싶으면 아래 조건 추가 가능
-      // if (!productLink.closest(".drop")) return;
-
       e.preventDefault();
 
       const id = productLink.dataset.id;
