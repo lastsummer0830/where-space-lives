@@ -1,29 +1,51 @@
 // js/detailPage1.js
 import { products } from "./products.js";
 
-/* 1) 상품 데이터 바인딩 (section1) */
-const product = products.find((p) => p.id === 1);
+/* ✅ 0) URL에서 id 읽기 (없으면 0) */
+const params = new URLSearchParams(window.location.search);
+const id = Number(params.get("id") ?? 0);
 
-document.querySelector(".section1__title").textContent = product.title;
-document.querySelector(".section1__price").textContent = `₩${product.price.toLocaleString()}`;
-document.querySelector(".section1__badge").textContent = product.type;
-document.querySelector(".section1__meta").textContent = product.content;
+/* ✅ 1) 상품 찾기 (하드코딩 X) */
+const product = products.find((p) => p.id === id);
 
-document.querySelector(".section1__discount").textContent = product.discountText;
-document.querySelectorAll(".section1__sub")[0].textContent =
-  `정가: ₩${product.originalPrice.toLocaleString()}`;
-document.querySelectorAll(".section1__sub")[1].textContent = product.period;
+/* ✅ 2) product 없으면 중단 */
+if (!product) {
+  console.error("상품을 찾지 못했습니다. id 확인:", id);
+} else {
+  /* 1) 상품 데이터 바인딩 (section1) */
+  document.querySelector(".section1__title").textContent = product.title;
+  document.querySelector(".section1__price").textContent = `₩${product.price.toLocaleString()}`;
+  document.querySelector(".section1__badge").textContent = product.type;
+  document.querySelector(".section1__meta").textContent = product.content;
 
-/*2)색상 선택 모달 (이미지 없이 컬러만) */
-// ✅ 색상 데이터 (원하는 색 더 추가 가능)
+  document.querySelector(".section1__discount").textContent = product.discountText;
+  document.querySelectorAll(".section1__sub")[0].textContent =
+    `정가: ₩${product.originalPrice.toLocaleString()}`;
+  document.querySelectorAll(".section1__sub")[1].textContent = product.period;
+
+  /* ✅ 이미지 주입 */
+  const thumbImgs = document.querySelectorAll(".galleryimg-list .detailimg img");
+  const mainImgs = document.querySelectorAll("#sliderTrack img");
+
+  product.img.forEach((src, i) => {
+    if (thumbImgs[i]) thumbImgs[i].src = src;
+    if (mainImgs[i]) mainImgs[i].src = src;
+  });
+
+  thumbImgs.forEach((img, i) => (img.alt = `${product.title} 썸네일 ${i + 1}`));
+  mainImgs.forEach((img, i) => (img.alt = `${product.title} 메인 ${i + 1}`));
+}
+
+/* ===================== 아래는 그대로 (색상/수량) ===================== */
+
+// ✅ 색상 데이터
 const COLORS = [
   { name: "블랙", value: "#000000" },
   { name: "화이트", value: "#ffffff" },
-  { name: "레드", value: "#ff0000"},
-  { name: "브라움", value: "#6a5500"}
+  { name: "레드", value: "#ff0000" },
+  { name: "브라움", value: "#6a5500" },
 ];
 
-// 초기 선택값 (화이트)
 let selectedColor = COLORS[1];
 
 // DOM
@@ -43,7 +65,6 @@ function renderSelectedColor() {
   colorSwatch.style.borderColor = selectedColor.value === "#ffffff" ? "#bbb" : "#ddd";
 }
 
-// 모달 열기/닫기
 function openModal() {
   modal.classList.add("is-open");
   modal.setAttribute("aria-hidden", "false");
@@ -53,11 +74,10 @@ function closeModal() {
   modal.setAttribute("aria-hidden", "true");
 }
 
-openBtn.addEventListener("click", openModal);
-overlay.addEventListener("click", closeModal);
-xBtn.addEventListener("click", closeModal);
+openBtn?.addEventListener("click", openModal);
+overlay?.addEventListener("click", closeModal);
+xBtn?.addEventListener("click", closeModal);
 
-// 옵션 리스트 그리기
 function renderColorOptions() {
   colorList.innerHTML = COLORS.map((c) => {
     const active = c.name === selectedColor.name ? "is-active" : "";
@@ -71,7 +91,6 @@ function renderColorOptions() {
     `;
   }).join("");
 
-  // 클릭 이벤트 연결
   colorList.querySelectorAll(".colorOption").forEach((btn) => {
     btn.addEventListener("click", () => {
       const name = btn.dataset.name;
@@ -84,15 +103,11 @@ function renderColorOptions() {
   });
 }
 
-// 초기 렌더
 renderSelectedColor();
 renderColorOptions();
 
-// ESC로 모달 닫기(선택)
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && modal.classList.contains("is-open")) {
-    closeModal();
-  }
+  if (e.key === "Escape" && modal.classList.contains("is-open")) closeModal();
 });
 
 // 수량버튼
@@ -102,17 +117,17 @@ const qtyNum = document.getElementById("qtyNum");
 
 let qty = 1;
 
-function renderQty(){
+function renderQty() {
   qtyNum.textContent = qty;
-  minus.disabled = qty <= 1; // 1 이하로 못 내려가게
+  minus.disabled = qty <= 1;
 }
 
-minus.addEventListener("click", () => {
-  if(qty > 1) qty--;
+minus?.addEventListener("click", () => {
+  if (qty > 1) qty--;
   renderQty();
 });
 
-plus.addEventListener("click", () => {
+plus?.addEventListener("click", () => {
   qty++;
   renderQty();
 });
