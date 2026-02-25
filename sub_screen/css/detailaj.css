@@ -6,6 +6,7 @@
 } */
 
 .galleryimg-list {
+  /* border: 1px solid red; */
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -35,6 +36,7 @@
 }
 
 .main-display {
+  /* border: 1px solid blue; */
   flex: 1;
   position: relative;
   background-color: #ffffff;
@@ -91,8 +93,9 @@
 .split-layout {
   display: flex; 
   gap: 50px; 
-  max-width: 1200px; 
+  max-width: 1100px; 
   margin: 0 auto; 
+  /* border: 1px solid red; */
 }
 
 
@@ -130,6 +133,7 @@
 
 
 .product-description-box {
+  /* border: 1px solid black; */
   margin-top: 30px;
   padding-top: 20px;
   border-top: 1px solid #e5e5e5; 
