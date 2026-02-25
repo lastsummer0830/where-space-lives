@@ -1,7 +1,7 @@
 .left_screen {
   width: 40%;
   height: auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   border-right: none;
 }
 /* ul 기본 스타일 제거 */
