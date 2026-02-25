@@ -23,22 +23,30 @@
 }
 
 .left_thumb {
-  position: relative;
   width: 100%;
-  overflow: hidden;
-  border: 1px solid red;
+  /* 이미지 카드 비율 */
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-/* 이미지 꽉 채우기 */
-.left_thumb img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+.bg-wood {
+  background-image: url("../../../sub_screen/images/headermainimges2.jpg");
+}
+.bg-modern {
+  background-image: url("../../../sub_screen/images/navImges1.png");
+}
+.bg-nature {
+  background-image: url("../../../sub_screen/images/warm_main.avif");
+}
+.bg-unique {
+  background-image: url("../../../sub_screen/images/nature1.avif");
 }
 /* 이미지 호버시 확대 */
-.left_card:hover .left_thumb img {
-  transform: scale(1.1);
+.left_card:hover .left_thumb {
+  transform: scale(1.02);
   transition: transform 220ms ease;
 }
 
