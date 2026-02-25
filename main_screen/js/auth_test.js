@@ -108,13 +108,6 @@
       return;
     }
 
-    const bestLink = target.closest(".menu_bottom a.nav_link.small");
-    if (bestLink && bestLink.textContent.trim().toUpperCase() === "BEST") {
-      e.preventDefault();
-      location.href = `${BASE}/sub_screen/sub_type/best.html`;
-      return;
-    }
-
     // 3-1) nav_link small (카테고리: 대분류)
     const categoryLink = target.closest(".has_drop > a.nav_link.small");
     if (categoryLink) {
@@ -123,6 +116,14 @@
       location.href = `${BASE}/sub_screen/sub_type/type.html?category=${encodeURIComponent(
         category,
       )}`;
+      return;
+    }
+
+    // 3-0) BEST (has_drop 아니고 단독 링크라 별도 처리)
+    const bestLink = target.closest(".menu_bottom a.nav_link.small");
+    if (bestLink && bestLink.textContent.trim().toUpperCase() === "BEST") {
+      e.preventDefault();
+      location.href = `${BASE}/sub_screen/sub_best/best.html`;
       return;
     }
 
