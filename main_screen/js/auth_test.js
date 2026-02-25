@@ -66,6 +66,25 @@
     goHome();
   });
 
+  //left_screen 카드 클릭 (WOOD~NATURE 이동)
+  const leftCard = target.closest(".left_card[data-left-go]");
+  if (leftCard) {
+    e.preventDefault();
+    const label = leftCard.dataset.leftGo;
+
+    const routes = {
+      WOOD: `${BASE}/sub_screen/html/SubProject.html`,
+      MODERN: `${BASE}/sub_screen/html/SubProject2.html`,
+      UNIQUE: `${BASE}/sub_screen/html/subaj3.html`,
+      NATURE: `${BASE}/sub_screen/html/subaj.html`,
+    };
+
+    const to = routes[label];
+    if (to) location.href = to;
+    else console.warn("[auth.js] left_card 라벨 매핑 없음:", label);
+    return;
+  }
+
   // 헤더 이동(상단/하단/드롭다운) 전부 "루트 기준"으로 처리
   document.addEventListener("click", (e) => {
     const target = e.target;
