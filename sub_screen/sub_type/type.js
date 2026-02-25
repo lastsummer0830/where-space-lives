@@ -1,21 +1,21 @@
 // 상품 데이터
 var products = [
-    { id : 0, price : 70000, title : '수납가구/수납장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구/수납장', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 0, price : 90000, title : '수납가구/수납장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구/수납장', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 1, price : 50000, title : '인테리어/오브제', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/오브제', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 2, price : 60000, title : '침실가구/침대', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/침대', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 3, price : 60000, title : '거실가구/테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/테이블', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 3, price : 20000, title : '거실가구/테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/테이블', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 4, price : 70000, title : '수납가구/서랍장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구/서랍장', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 5, price : 50000, title : '인테리어/커튼', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/커튼', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 6, price : 60000, title : '침실가구/침구', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/침구', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 5, price : 100000, title : '인테리어/커튼', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/커튼', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 6, price : 40000, title : '침실가구/침구', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/침구', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 7, price : 60000, title : '거실가구/의자', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/의자', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 8, price : 70000, title : '수납가구/오피스용품', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구/오피스용품', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 9, price : 50000, title : '인테리어/러그', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/러그', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 10, price : 60000, title : '침실가구/매트리스', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/매트리스', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 10, price : 40000, title : '침실가구/매트리스', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/매트리스', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 11, price : 60000, title : '거실가구/소파', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/소파', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 12, price : 70000, title : '수납가구/수납장', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '수납가구/수납장', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 13, price : 50000, title : '인테리어/오브제', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/오브제', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
+    { id : 13, price : 80000, title : '인테리어/오브제', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '인테리어/오브제', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
     { id : 14, price : 60000, title : '침실가구/침대', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '침실가구/침대', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'},
-    { id : 15, price : 60000, title : '거실가구/테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/테이블', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'}
+    { id : 15, price : 20000, title : '거실가구/테이블', content: '[29CM 단독] (uni)도미토리 포도바나나 파자마', type: '거실가구/테이블', img: 'https://img.29cm.co.kr/item/202511/11f0baf476c5db5393804f33500318d0.jpg?width=408&format=webp'}
 ]
 
 // url의 뒤에 붙어있는 쿼리스트링에서 category 가져오기
@@ -105,22 +105,27 @@ function layout(items){
 // 해당되는 mainType의 상품들만 생성하는 함수
 function mainType_layout(){
     let productsFilter = products.filter(function(items){
-            return items.mainType == mainType[index];
+            return items.mainType == mainType[index].mainType;
         });
 
-        $('.best_wrap').html('');
+        $('#items').html('');
 
         layout(productsFilter);
-        // $('.price').css('background','#FFFF9A');
+        
+        return productsFilter;
 }
 
-mainType_layout();
+// filteredProducts: mainType의 상품으로만 필터링된 상품 객체 배열
+const filteredProducts = mainType_layout();
+console.log(filteredProducts);
 
 
 // abc정렬
 $('#sortAbc').click(function(){
+    
+
     // 배열.slice(): 배열 복사해서 새 배열 만듬
-    let productsAbc = products.slice();
+    let productsAbc = filteredProducts.slice();
 
     productsAbc.sort(function(item1, item2){
         // return이 음수면 item1이 왼쪽, item2가 오른쪽
@@ -142,7 +147,7 @@ $('#sortAbc').click(function(){
 
 // 가격순 정렬
 $('#sortPrice').click(function(){
-    let productsPrice = products.slice();
+    let productsPrice = filteredProducts.slice();
     productsPrice.sort(function(item1, item2){
         return item1.price - item2.price;
     });
@@ -156,7 +161,7 @@ $('#sortPrice').click(function(){
 
 // 일정 가격만 출력
 $('#filterPrice').click(function(){
-let productsFilter = products.filter(function(item){
+let productsFilter = filteredProducts.filter(function(item){
     return item.price <= 60000;
     });
 
