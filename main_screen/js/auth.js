@@ -12,15 +12,19 @@
       return null;
     }
   };
+  
+  const REPO = "acon_front_project"; // 네 레포명으로 변경
+  const goLogin = () =>
+    (location.href = `/${REPO}/main_screen/html/login.html`);
+  const goMypage = () =>
+    (location.href = `/${REPO}/main_screen/html/mypage.html`);
+  // const goLogin = () => {
+  //   location.href = "../../main_screen/html/login.html";
+  // };
 
-  const goLogin = () => {
-    // 어떤 페이지에서든 login.html로 가게함
-    location.href = "../../main_screen/html/login.html";
-  };
-
-  const goMypage = () => {
-    location.href = "../../main_screen/html/mypage.html";
-  };
+  // const goMypage = () => {
+  //   location.href = "../../main_screen/html/mypage.html";
+  // };
 
   // 버튼 찾기
   const mypageLink = document.querySelector("[data-auth-mypage]");
