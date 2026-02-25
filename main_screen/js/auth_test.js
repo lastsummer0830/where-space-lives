@@ -119,6 +119,14 @@
       return;
     }
 
+    // 3-0) BEST (has_drop 아니고 단독 링크라 별도 처리)
+    const bestLink = target.closest(".menu_bottom a.nav_link.small");
+    if (bestLink && bestLink.textContent.trim().toUpperCase() === "BEST") {
+      e.preventDefault();
+      location.href = `${BASE}/sub_screen/sub_best/best.html`;
+      return;
+    }
+
     // 3-2) drop_title (소분류)
     const dropTitle = target.closest(".drop_title");
     if (dropTitle) {
