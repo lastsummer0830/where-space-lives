@@ -12,7 +12,7 @@ export const products = [
     "../images/이케아상자3.avif",
     "../images/이케아상자4.avif",
     "../images/이케아상자5.avif",
-    "../images/이케아상자6.avif"
+    "../images/이케아상자6.avif",
     "../images/침실가구_침대vif",
     "../images/침실가구_침대if",
     "../images/침실가구_침대if",
@@ -38,7 +38,7 @@ export const products = [
     "../images/nature_shelf3.avif",
     "../images/nature_shelf4.avif",
     "../images/nature_shelf5.avif",
-    "../images/nature_shelf6.jpeg"
+    "../images/nature_shelf6.jpeg",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -63,7 +63,7 @@ export const products = [
     "../images/오피스_책상3.avif",
     "../images/오피스_책상4.avif",
     "../images/오피스_책상5.avif",
-    "../images/오피스_책상6.avif"
+    "../images/오피스_책상6.avif",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -88,7 +88,7 @@ export const products = [
     "../images/오브제_조화3.avif",
     "../images/오브제_조화4.avif",
     "../images/오브제_조화5.avif",
-    "../images/오브제_조화6.avif"
+    "../images/오브제_조화6.avif",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -113,7 +113,7 @@ export const products = [
     "../images/커튼.러그_러그3.avif",
     "../images/커튼.러그_러그4.avif",
     "../images/커튼.러그_러그5.avif",
-    "../images/커튼.러그_러그6.avif"
+    "../images/커튼.러그_러그6.avif",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -138,7 +138,7 @@ export const products = [
     "../images/커튼.러그_커튼3.avif",
     "../images/커튼.러그_커튼4.avif",
     "../images/커튼.러그_커튼5.avif",
-    "../images/커튼.러그_커튼6.avif"
+    "../images/커튼.러그_커튼6.avif",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -163,7 +163,7 @@ export const products = [
     "../images/warm_rtstand3.avif",
     "../images/warm_rtstand4.avif",
     "../images/warm_rtstand5.avif",
-    "../images/warm_rtstand6.jpeg"
+    "../images/warm_rtstand6.jpeg",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
@@ -188,7 +188,7 @@ export const products = [
     "../images/warm_stand2.avif",
     "../images/warm_stand3.avif",
     "../images/warm_stand4.avif",
-    "../images/warm_stand5.avif"
+    "../images/warm_stand5.avif",
     "../images/침실가구_침대1.avif",
     "../images/침실가구_침대2.avif",
     "../images/침실가구_침대3.avif",
