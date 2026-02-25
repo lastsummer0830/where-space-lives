@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../../main_screen/css/header/header.css">
+    <script defer src="../../main_screen/js/auth_test.js"></script>
+    <script
+      type="module"
+      src="../../main_screen/js/header/products_nav.js"
+    ></script>
+    <link rel="stylesheet" href="../../main_screen/css/header/header.css" />
     <script
       src="https://kit.fontawesome.com/4ec79785b5.js"
       crossorigin="anonymous"
@@ -17,7 +22,7 @@
       <nav class="main_nav">
         <!-- 로고, 작은 메뉴4개 -->
         <div class="top_mini">
-          <a class="logo" href="index.html">LOGO</a>
+          <a class="logo" href="#">LOGO</a>
 
           <!-- <ul class="mini_menu">
             <li><a href="#">M1</a></li>
@@ -28,7 +33,7 @@
           <ul class="mini_menu icon_menu">
             <!-- MY PAGE -->
             <li>
-              <a class="icon_link" href="#">
+              <a class="icon_link" href="#" data-auth-mypage>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -88,7 +93,7 @@
 
             <!-- LOGIN -->
             <li>
-              <a class="icon_link" href="./main_screen/html/login.html">
+              <a class="icon_link" href="#" data-auth-login>
                 <svg
                   viewBox="0 0 24 24"
                   width="24"
@@ -110,18 +115,16 @@
         <div class="nav_top">
           <ul class="menu_top">
             <li>
-              <a class="nav_link big" href="../html/SubProject.html">WOOD</a>
+              <a class="nav_link big" href="#">WOOD</a>
             </li>
             <li>
-              <a class="nav_link big" href="../html/SubProject2.html"
-                >MORDERN</a
-              >
+              <a class="nav_link big" href="#">MODERN</a>
             </li>
             <li>
-              <a class="nav_link big" href="../sub_aj/subaj.html">UNIQUE</a>
+              <a class="nav_link big" href="#">UNIQUE</a>
             </li>
             <li>
-              <a class="nav_link big" href="../sub_aj2/subaj2.html">NATURE</a>
+              <a class="nav_link big" href="#">NATURE</a>
             </li>
           </ul>
 
