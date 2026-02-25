@@ -172,10 +172,10 @@ let productsFilter = filteredProducts.filter(function(item){
 })
 
 
-// 수납가구만 출력
-$('#수납가구').click(function(){
+// subType1만 출력
+$(`#${mainType[index].subType1}`).click(function(){
 let productsFilter = products.filter(function(item){
-        return item.type == "수납가구";
+        return item.subType == `${mainType[index].subType1}`;
     });
 
     $('#items').html('');
@@ -185,10 +185,10 @@ let productsFilter = products.filter(function(item){
 })
 
 
-// 인테리어 소품만 출력
-$('#인테리어소품').click(function(){
+// subType2만 출력
+$(`#${mainType[index].subType2}`).click(function(){
 let productsFilter = products.filter(function(item){
-        return item.type == "인테리어소품";
+        return item.subType == `${mainType[index].subType2}`;
     });
 
     $('#items').html('');
@@ -198,10 +198,10 @@ let productsFilter = products.filter(function(item){
 })
 
 
-// 침실 가구만 출력
-$('#침실가구').click(function(){
+// subType3만 출력
+$(`#${mainType[index].subType3}`).click(function(){
 let productsFilter = products.filter(function(item){
-        return item.type == "침실가구";
+        return item.subType == `${mainType[index].subType3}`;
     });
 
     $('#items').html('');
@@ -211,23 +211,11 @@ let productsFilter = products.filter(function(item){
 })
 
 
-// 거실 가구만 출력
-$('#거실가구').click(function(){
-let productsFilter = products.filter(function(item){
-        return item.type == "거실가구";
-    });
 
-    $('#items').html('');
-
-    layout(productsFilter);
-    // $('.price').css('background','#FFFF9A');
-})
-
-
-// 전체 버튼
+// mainType의 상품들 전체 출력
 $('#revert').click(function(){
 
     $('#items').html('');
     
-    layout(products);
+    layout(filteredProducts);
 })
