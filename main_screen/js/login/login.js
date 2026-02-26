@@ -45,7 +45,7 @@
     toggleBtn.addEventListener("click", () => {
       const isHidden = userPw.type === "password";
       userPw.type = isHidden ? "text" : "password";
-      toggleBtn.setAttribute("aria-pressed", String(isHidden));
+      toggleBtn.setAttribute( String(isHidden));
     });
   }
 

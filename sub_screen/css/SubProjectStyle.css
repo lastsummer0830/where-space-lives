@@ -1,5 +1,6 @@
 * { box-sizing: border-box; }
 body { margin: 0; }
+
 /* nav */
 .hero {
   height: 100vh;
@@ -454,3 +455,36 @@ footer{
     height: 240px;
   }
 }
+
+/* main 이미지 hover + 클릭 공통 */
+.click-card{
+  display: block;
+  text-decoration: none;
+  border-radius: 30px;
+  overflow: hidden; /* 확대 시 삐져나오는 거 방지 */
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+/* a 안의 이미지 div 공통 */
+.click-card > div{
+  transition: transform .35s ease, filter .35s ease;
+  will-change: transform;
+}
+
+/* hover 시: 카드가 살짝 뜨는 느낌 */
+.click-card:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.18);
+}
+
+/* hover 시: 이미지 살짝 확대 + 톤 조절 */
+.click-card:hover > div{
+  transform: scale(1.06);
+  filter: brightness(0.95);
+}
+
+/* 눌렀을 때 */
+.click-card:active > div{
+  transform: scale(1.03);
+}
+
