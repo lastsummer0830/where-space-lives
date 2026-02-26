@@ -70,21 +70,18 @@ if (!product) {
       }
     });
   }
-
   // 오른쪽 화살표 버튼(next) 클릭 이벤트
   if (nextBtn) {
     nextBtn.addEventListener("click", () => {
       moveSlide(currentIndex + 1);
     });
   }
-
   // 왼쪽 화살표 버튼(prev) 클릭 이벤트
   if (prevBtn) {
     prevBtn.addEventListener("click", () => {
       moveSlide(currentIndex - 1);
     });
   }
-
   // 왼쪽 썸네일 사진 직접 클릭 이벤트
   detailBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => {
