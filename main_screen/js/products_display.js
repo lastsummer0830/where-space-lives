@@ -60,7 +60,7 @@ for (let i = 0; i < 8; i++) {
         <div class="pop_inner">
           <p class="dsc">로그인이 필요해요.</p>
           <button type="button" class="btn_close">취소</button>
-          <a href="#">로그인 하기</a>
+          <a href="./main_screen/html/login.html">로그인 하기</a>
         </div>
       </div>
     </div>
@@ -86,7 +86,7 @@ for (let i = 0; i < 8; i++) {
         <div class="pop_inner">
           <p class="dsc">로그인이 필요해요.</p>
           <button type="button" class="btn_close">취소</button>
-          <a href="#">로그인 하기</a>
+          <a href="./main_screen/html/login.html">로그인 하기</a>
         </div>
       </div>
     </div>
