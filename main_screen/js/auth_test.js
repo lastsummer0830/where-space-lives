@@ -79,8 +79,8 @@
       const routes = {
         WOOD: `${BASE}/sub_screen/html/SubProject.html`,
         MODERN: `${BASE}/sub_screen/html/SubProject2.html`,
-        UNIQUE: `${BASE}/sub_screen/html/subaj3.html`,
-        NATURE: `${BASE}/sub_screen/html/subaj.html`,
+        UNIQUE: `${BASE}/sub_screen/html/subaj.html`,
+        NATURE: `${BASE}/sub_screen/html/subaj3.html`,
       };
 
       const to = routes[label];
@@ -98,8 +98,8 @@
       const routes = {
         WOOD: `${BASE}/sub_screen/html/SubProject.html`,
         MODERN: `${BASE}/sub_screen/html/SubProject2.html`,
-        UNIQUE: `${BASE}/sub_screen/html/subaj3.html`,
-        NATURE: `${BASE}/sub_screen/html/subaj.html`,
+        UNIQUE: `${BASE}/sub_screen/html/subaj.html`,
+        NATURE: `${BASE}/sub_screen/html/subaj3.html`,
       };
 
       const to = routes[label];
