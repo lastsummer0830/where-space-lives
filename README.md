@@ -58,6 +58,45 @@ TODO(다음 세션 캡처): docs/images/에 3컷 넣기 — ① 네이처 컨셉
 
 ---
 
+## 실행 방법
+
+별도 빌드 과정 없이 동작하는 **정적 사이트**입니다.
+
+```bash
+git clone https://github.com/lastsummer0830/where-space-lives.git
+cd where-space-lives
+```
+
+`index.html`을 브라우저로 바로 열어도 되지만, 일부 화면이 **ES Module**로 스크립트를 나눠 불러오므로 로컬 정적 서버로 여는 것을 권장합니다.
+
+```bash
+npx serve .          # 또는 VS Code의 Live Server 확장
+```
+
+→ 브라우저에서 `index.html` (메인) · `sub_screen/html/SubProject.html` (우드 컨셉) 등으로 진입
+
+---
+
+## 폴더 구조
+
+```
+where-space-lives/
+├── index.html                 # 진입점 (메인 랜딩)
+├── main_screen/               # 메인 · 헤더 · 로그인 · 상품 목록  (팀원)
+│   ├── html/ css/ js/
+│   └── struc.html
+└── sub_screen/                # ★ 서브 컨셉 페이지 · 상품 상세  (조아진 담당)
+    ├── html/                  #   컨셉 페이지 4종 · 상품 상세
+    │   ├── SubProject.html    #     우드 컨셉
+    │   ├── subaj3.html        #     네이처 컨셉 (스크롤 애니메이션)
+    │   └── detailPage1.html   #     상품 상세 (색상 선택)
+    ├── sub_best/ sub_type/    #   베스트 · 타입별 큐레이션
+    ├── css/ js/
+    └── images/                #   상품 · 컨셉 이미지 에셋 (.avif 최적화)
+```
+
+---
+
 ## 회고
 
 - 프레임워크 없이 바닐라로 만들며 DOM · 이벤트 · 스크롤 인터랙션의 기본기를 다졌습니다.
